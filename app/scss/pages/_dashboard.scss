@@ -1,0 +1,29 @@
+// dashboard
+// --------------------------------------------------
+
+body {
+    padding-top: 80px; // for header
+}
+.content {
+    @include media-breakpoint-up(lg) {
+        padding: 100px;
+    }
+    @include media-breakpoint-down(md) {
+        padding: 30px;
+    }
+    &.visiable-header-icon{
+        padding-top: 82px;
+    }
+    &.show-hide-content {
+        @include media-breakpoint-up(lg) {
+            max-width : calc(100% - 86px); 
+            flex-basis: 100%;
+            transition : all 0.4s ease;
+        }
+    }
+}
+.feather {
+    width: 16px;
+    height: 16px;
+    vertical-align: text-bottom;
+}

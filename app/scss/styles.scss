@@ -1,0 +1,19 @@
+// vendors scss
+// --------------------------------------------------
+// bootstrap
+@import "vendors/bootstrap";
+// helpers scss
+// --------------------------------------------------
+@import 'helpers/helper-loader';
+//  base scss
+// --------------------------------------------------
+@import 'base/_reset';
+// components scss
+// --------------------------------------------------
+@import 'components/components-loader';
+// Layout scss
+// --------------------------------------------------
+@import 'layout/layout-loader';
+// page scss
+// --------------------------------------------------
+@import 'pages/page-loader';

@@ -1,0 +1,155 @@
+// Header
+// --------------------------------------------------
+.header {
+    height: 80px;
+    box-shadow: 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &.extend-header {
+            @include media-breakpoint-up(lg) {
+                max-width : calc(100% - 86px); 
+                flex-basis: 100%;
+                transition : all 0.4s ease;
+            }
+        }
+
+        @include media-breakpoint-up(lg) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @include media-breakpoint-down(md) {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+    &__left {
+        @include media-breakpoint-down(sm) {
+            flex: 1;
+        }
+    }
+    //--- search ---
+    &__search {
+        @include media-breakpoint-up(md) {
+            margin-left: 15px;
+        }
+        @include media-breakpoint-down(sm) {
+            margin-left: 5px;
+        }
+        border: none;
+        .input-group-text {
+            border: none;
+            background: none;
+            padding: 0;
+            cursor: pointer;
+        }
+        .form-control {
+            border: none;
+            color: $bluey-grey;
+            font-size: rem(15px);
+            &:focus{
+                box-shadow: none;
+            }
+        }
+    }
+    .feather-more-vertical {
+        width: 24px;
+        height: 24px;
+        margin-right: 10px;
+        color: $water-blue;
+        cursor: pointer;
+    }
+    .icon_menu {
+        width: 38px;
+        height: 34px;
+        padding: 10px;
+        cursor: pointer;
+        display: inline-block;
+        margin-left: -10px;
+        background: url('../images/icons/menu.png') no-repeat center center;
+    }
+    &__icons {
+        display: flex;
+        margin-bottom: 0;
+        align-items: center;
+        @include media-breakpoint-up(md) {
+
+        }
+        @include media-breakpoint-down(sm) {
+            width: 100%;
+            position: fixed;
+            top: -52px;
+            left: 0;
+            z-index: 1;       
+            background-color: $white;     
+            transition : all 0.2s ease;
+            padding-left: 30px;
+            padding-right: 30px;
+            border-top: 1px solid #f4f6fc;
+        }
+        &--show {
+          top: 80px;  
+          justify-content: flex-end;
+
+        }
+
+        a.notification {
+            position: relative;
+            &::before {
+                width: 13px;
+                height: 13px;
+                content: '';
+                left: 50%;
+                top: 10px;
+                border-radius: 50%;
+                position: absolute;
+                display: block;
+                background-color: #fc476e;
+            }
+        }
+    }
+}
+
+//-logo
+.logo {
+    align-items: center;
+    background-color: $cerulean-blue-two;
+    img {
+        @include media-breakpoint-up(lg) {
+            margin-left: 15px;
+        } 
+    }
+    @include media-breakpoint-up(lg) { 
+        display: flex;
+    }
+    @include media-breakpoint-down(md) { 
+        display: none !important;
+    }
+    &.sm-logo {
+        max-width : 86px;
+        overflow: hidden;
+        display: block;         
+        position: relative;
+        transition : all 0.3s ease;
+        &::after {
+            top: 0;
+            right: 0;
+            content: '';
+            display: block;
+            width: 15px;
+            height: 80px;
+            position: absolute;
+            background-color: $cerulean-blue-two;
+        }
+        img {
+            width: 123px;
+            max-width: none;
+            margin-top: 15px;
+            margin-left: 0;
+        }
+    }
+}
+.cursor-pointer {
+    cursor: pointer;
+}

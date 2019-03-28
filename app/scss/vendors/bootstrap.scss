@@ -1,0 +1,7 @@
+//Include parts of Bootstrap
+// Required
+@import "node_modules/bootstrap/scss/functions";
+//custom bootstrap-variables-override
+@import "_bootstrap-variables-override";
+// bootstrap
+@import "node_modules/bootstrap/scss/bootstrap";

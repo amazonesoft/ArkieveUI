@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>arkieve</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet"> 
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+
+    <header class="header row fixed-top bg-white m-0">
+        <a class="col-lg-3 col-xlg-2 logo" href="#">
+            <img src="images/arkieve-logo.png" class="img-fluid" alt="arkieve-logo">
+        </a>
+        <!-- end logo -->
+        <div class="col-lg-9 col-xlg-10 ml-md-auto header__right">
+
+            <div class="header__left d-flex align-items-center">
+                <span class="icon_menu"></span>
+                <div class="input-group header__search">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">
+                            <img src="images/icons/search.png" alt="search">
+                        </span>
+                    </div>
+                    <input type="text" class="form-control" placeholder="search your..." aria-label="search your..."
+                        aria-describedby="basic-addon1">
+                </div>
+                <span class="collapse-menu d-md-none">                    
+                    <i data-feather="more-vertical"></i>
+                </span>
+            </div>
+
+            <ul class="list-unstyled header__icons">
+                <li>
+                    <a class="nav-link schedule" href="#">
+                        <img src="images/icons/schedule.png" alt="schedule">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link bell notification" href="#">
+                        <img src="images/icons/bell.png" alt="bell">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link mail notification" href="#">
+                        <img src="images/icons/mail.png" alt="bell">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link pr-0 profile" href="#">
+                        <img src="images/icons/avatar.png" alt="avatar" width="36" height="36" class="rounded-circle">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <!-- strat sidebar -->
+            <nav class="col-lg-3 col-xlg-2 sidebar">
+                <div class="sidebar-sticky">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active home" href="#">Home 
+                                <span class="sr-only">(current)</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link availability" href="#">
+                                 Availability
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link schedule" href="#">
+                                Schedule
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link user-management" href="#">
+                                User Management
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link social-documentation" href="#">
+                                Social Documentation
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link sam" href="#">
+                                 SAM
+                            </a>
+                        </li>
+                        <li class="nav-item reports">
+                            <a class="nav-link reports" href="#">
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link administrator" href="#">
+                                Administrator
+                            </a>
+                        </li>                       
+                    </ul>
+                </div>
+            </nav>
+            <!-- end nav/sidebar -->
+
+
+            <main role="main"  class="col-lg-9 col-xlg-10 ml-md-auto content " >
+
+                <div class="card p-3">
+                     <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
+                </div>
+               
+            </main>
+            <!-- end main -->
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Optional for iconc font -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <!-- Optional for Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+
+
+    <!-- custom JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>
