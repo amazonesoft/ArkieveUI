@@ -1,27 +1,24 @@
 // Header
 // --------------------------------------------------
 .header {
+    display: flex;
     height: 80px;
+    background-color: $white;
     box-shadow: 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
     &__right {
+        flex: 1;
         display: flex;
         align-items: center;
+        transition : all 0.4s ease;
         justify-content: space-between;
-        &.extend-header {
-            @include media-breakpoint-up(lg) {
-                max-width : calc(100% - 86px); 
-                flex-basis: 100%;
-                transition : all 0.4s ease;
-            }
-        }
 
         @include media-breakpoint-up(lg) {
             padding-left: 100px;
             padding-right: 100px;
         }
         @include media-breakpoint-down(md) {
-            padding-left: 30px;
-            padding-right: 30px;
+            padding-left: 15px;
+            padding-right: 15px;
         }
     }
     &__left {
@@ -66,16 +63,12 @@
         padding: 10px;
         cursor: pointer;
         display: inline-block;
-        margin-left: -10px;
         background: url('../images/icons/menu.png') no-repeat center center;
     }
     &__icons {
         display: flex;
         margin-bottom: 0;
         align-items: center;
-        @include media-breakpoint-up(md) {
-
-        }
         @include media-breakpoint-down(sm) {
             width: 100%;
             position: fixed;
@@ -113,13 +106,10 @@
 
 //-logo
 .logo {
+    width: 275px;
     align-items: center;
+    padding-left: 15px;
     background-color: $cerulean-blue-two;
-    img {
-        @include media-breakpoint-up(lg) {
-            margin-left: 15px;
-        } 
-    }
     @include media-breakpoint-up(lg) { 
         display: flex;
     }

@@ -6,8 +6,9 @@
   //---------- for hamburger menu ---------
   $('.icon_menu').click(function(){
     $('.sidebar').toggleClass('show-hide-sidebar');
-    $('.content').toggleClass('show-hide-content');
     $('.logo').toggleClass('sm-logo');
+
+    $('body').toggleClass('visiable-sm-menu ');
     $('.header__right').toggleClass('extend-header');
   })
 

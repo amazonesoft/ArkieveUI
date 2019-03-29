@@ -21,4 +21,16 @@ body {
 
 body {
     font-display: optional;
+    &:not(.visiable-sm-menu) {
+        @include media-breakpoint-up(lg) {
+            padding-left: 275px;
+        }        
+    }
+    &.visiable-sm-menu {
+        @include media-breakpoint-up(lg) {
+            padding-left: 86px;
+        }        
+    }
+
 }
+

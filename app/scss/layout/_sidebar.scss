@@ -4,6 +4,7 @@
     top: 0;
     bottom: 0;
     z-index: 100;
+    width: 275px;
     position: fixed;
     padding: 80px 0 0 0;
     background-color: $white;
@@ -15,7 +16,7 @@
         left: -450px;
         visibility: hidden;
     }
-    &.visiable-header-icon{
+    &.visiable-header-icon {
         padding-top: 132px;
     }
 
@@ -32,11 +33,9 @@
         @include media-breakpoint-down(md) {
             visibility: visible;
             left: 0px !important;
-            max-width: 50vw;
             transition : all 0.1s ease;
         }
     }
-
 
     .nav-link  {
         color: $bluey-grey;
@@ -158,6 +157,9 @@
     height: calc(100vh - 80px);
     @include scrollbars(.5em, slategray);
     overflow-x: hidden !important;
+}
+.visiable-header-icon .sidebar-sticky {
+    height: calc(100vh - 132px);
 }
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {

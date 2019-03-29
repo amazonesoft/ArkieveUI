@@ -5,21 +5,17 @@ body {
     padding-top: 80px; // for header
 }
 .content {
+    flex: 1;
+    transition : all 0.4s ease;
     @include media-breakpoint-up(lg) {
         padding: 100px;
     }
     @include media-breakpoint-down(md) {
-        padding: 30px;
+        padding-top: 15px;
+        padding-bottom: 15px;
     }
-    &.visiable-header-icon{
+    &.visiable-header-icon {
         padding-top: 82px;
-    }
-    &.show-hide-content {
-        @include media-breakpoint-up(lg) {
-            max-width : calc(100% - 86px); 
-            flex-basis: 100%;
-            transition : all 0.4s ease;
-        }
     }
 }
 .feather {
