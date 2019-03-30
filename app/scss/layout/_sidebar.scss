@@ -1,163 +1,196 @@
 // Sidebar
 // --------------------------------------------------
 .sidebar {
-    top: 0;
-    bottom: 0;
-    z-index: 100;
-    width: 275px;
-    position: fixed;
-    padding: 80px 0 0 0;
+    top             : 0;
+    bottom          : 0;
+    z-index         : 100;
+    width           : 275px;
+    position        : fixed;
+    padding         : 80px 0 0 0;
     background-color: $white;
-    box-shadow: 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
-    @include media-breakpoint-up(lg) { 
+    box-shadow      : 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
+
+    @include media-breakpoint-up(lg) {
         left: 0;
     }
-    @include media-breakpoint-down(md) { 
-        left: -450px;
+
+    @include media-breakpoint-down(md) {
+        left      : -450px;
         visibility: hidden;
     }
+
     &.visiable-header-icon {
         padding-top: 132px;
     }
 
     &.show-hide-sidebar {
         @include media-breakpoint-up(lg) {
-            width : 86px;
-            overflow: hidden;            
-            transition : all 0.3s ease;
+            width     : 86px;
+            overflow  : hidden;
+            transition: all 0.3s ease;
+
             .nav-link {
-                color: transparent !important;
-                transition : all 0.3s ease;
+                color     : transparent !important;
+                transition: all 0.3s ease;
             }
         }
+
         @include media-breakpoint-down(md) {
             visibility: visible;
-            left: 0px !important;
-            transition : all 0.1s ease;
+            left      : 0px !important;
+            transition: all 0.1s ease;
         }
     }
 
-    .nav-link  {
-        color: $bluey-grey;
-        font-size: rem(15px);
+    .nav-link {
+        color      : $bluey-grey;
+        font-size  : rem(15px);
         line-height: rem(20px);
-        transition: all 0.3s ease-in;
-        padding: rem(18px) rem(10px) rem(18px) rem(68px);
-        &.active,&:hover {
+        transition : all 0.3s ease-in;
+        padding    : rem(18px) rem(10px) rem(18px) rem(68px);
+
+        &.active,
+        &:hover {
             background-color: #ecf2fd;
         }
-        &.active{
+
+        &.active {
             color: $cerulean-blue;
         }
+
         &.home {
             background: {
-                 repeat: no-repeat;
-                 position: left 32px top 18px;
-            } 
+                repeat  : no-repeat;
+                position: left 32px top 18px;
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/home.png');
             }
+
             &.active {
                 background-image: url('../images/icons/home-blue.png');
             }
         }
+
         &.availability {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/availability.png');
             }
+
             &.active {
                 background-image: url('../images/icons/availability-blue.png');
             }
         }
+
         &.schedule {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/schedule.png');
             }
+
             &.active {
                 background-image: url('../images/icons/schedule-blue.png');
             }
         }
+
         &.user-management {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/user-management.png');
             }
+
             &.active {
                 background-image: url('../images/icons/user-management-blue.png');
             }
         }
+
         &.social-documentation {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/social-documentation.png');
             }
+
             &.active {
                 background-image: url('../images/icons/social-documentation-blue.png');
             }
         }
-        &.sam {            
+
+        &.sam {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/sam.png');
             }
+
             &.active {
                 background-image: url('../images/icons/sam-blue.png');
-            }  
+            }
         }
+
         &.reports {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/reports.png');
             }
+
             &.active {
                 background-image: url('../images/icons/reports-blue.png');
-            }  
+            }
         }
-        &.administrator {            
+
+        &.administrator {
             background: {
-                repeat: no-repeat;
+                repeat  : no-repeat;
                 position: left 32px top 18px;
-            } 
+            }
+
             &:not(.active) {
                 background-image: url('../images/icons/administrator.png');
             }
+
             &.active {
                 background-image: url('../images/icons/administrator-blue.png');
-            }  
+            }
         }
-        
+
     }
 }
 
 .sidebar-sticky {
-    top: 0;
+    top       : 0;
     overflow-y: auto;
     overflow-x: hidden;
-    position: relative;
-    height: calc(100vh - 80px);
+    position  : relative;
+    height    : calc(100vh - 80px);
     @include scrollbars(.5em, slategray);
     overflow-x: hidden !important;
 }
+
 .visiable-header-icon .sidebar-sticky {
     height: calc(100vh - 132px);
 }

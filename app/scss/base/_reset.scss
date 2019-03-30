@@ -1,36 +1,40 @@
 // Reset
 // --------------------------------------------------
-html{
+html {
     overflow-y: scroll;
 }
+
 html,
 body {
     height: 100%;
     /* Adjust font size */
-    font-size: 100%;
+    font-size               : 100%;
     -webkit-text-size-adjust: 100%;
     /* Font varient */
-    font-variant-ligatures: none;
+    font-variant-ligatures        : none;
     -webkit-font-variant-ligatures: none;
     /* Smoothing */
-    text-rendering: optimizeLegibility;
+    text-rendering         : optimizeLegibility;
     -moz-osx-font-smoothing: grayscale;
-    font-smoothing: antialiased;
-    -webkit-font-smoothing: antialiased;
+    font-smoothing         : antialiased;
+    -webkit-font-smoothing : antialiased;
 }
 
 body {
     font-display: optional;
-    &:not(.visiable-sm-menu) {
-        @include media-breakpoint-up(lg) {
-            padding-left: 275px;
-        }        
-    }
-    &.visiable-sm-menu {
-        @include media-breakpoint-up(lg) {
-            padding-left: 86px;
-        }        
+    &:not(.before-login) {
+        padding-top: 80px; 
+        &:not(.visiable-sm-menu) {
+            @include media-breakpoint-up(lg) {
+                padding-left: 275px;
+            }
+        }
+
+        &.visiable-sm-menu {
+            @include media-breakpoint-up(lg) {
+                padding-left: 86px;
+            }
+        }
     }
 
 }
-

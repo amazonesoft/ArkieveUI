@@ -1,0 +1,86 @@
+// Login
+// --------------------------------------------------
+.login {
+    display   : flex;
+    min-height: 100vh;
+    &__left {
+        flex: 1;
+        @include media-breakpoint-down(sm) {
+            display: none;
+        }
+        background : {
+            color   : #1364e9;
+            image   : url('../images/bg-login-1.jpg');
+            repeat  : no-repeat;
+            size    : cover;
+            position: left top;
+        }
+    }
+
+    &__header {
+        padding: 30px 15px 50px 100px;
+    }
+    .welcom-text {
+        color     : white;
+        text-align: center;
+        span {
+            font-size: 20px;
+        }
+        b {
+            font-size     : 59.5px;
+            letter-spacing: 6px;
+        }
+    }
+
+    &__right {
+        flex           : 1;
+        display        : flex;
+        padding        : 50px;
+        align-items    : center;
+        justify-content: center;
+    }
+
+    &__form {
+        max-width: 570px;
+        header {
+            margin-bottom: 30px;
+        }
+        .form-row>div {
+            margin-bottom: rem(20px);
+        }
+        p {
+            font-size     : rem(16px);
+            line-height   : 1.38;
+            letter-spacing: 1.6px;
+            color         : $bluey-grey;
+        }
+        label {
+            font-size  : rem(14px);
+            line-height: 1.57;
+            color      : $bluey-grey;
+        }
+        .form-control {
+            height          : 55px;
+            border-radius   : 6px;
+            background-color: #e0e7ff;
+        }
+        a {
+            font-size  : rem(14px);
+            line-height: 1.57;
+            color      : $bluey-grey;
+        }
+        .btn {
+            height          : 55px;
+            border-radius   : 6px;
+            background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
+        }
+    }
+    &__title {
+        font-size     : rem(34px);
+        font-weight   : bold;
+        line-height   : 0.94;
+        letter-spacing: 1.7px;
+        color         : $bluey-grey;
+        margin-bottom : rem(20px);
+    }
+}
