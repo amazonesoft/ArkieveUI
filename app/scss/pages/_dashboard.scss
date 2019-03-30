@@ -16,6 +16,24 @@
     &.visiable-header-icon {
         padding-top: 82px;
     }
+    .page_title {
+        color: #495b76;
+        font-weight: 600;
+        line-height: 1.33;
+        letter-spacing: 1.2px;
+        font-size: rem(24px);
+        margin-bottom: 30px;
+        @include media-breakpoint-up(lg) {
+            margin-top: -50px;
+        }
+        &__back {
+            .feather-arrow-left {
+                width:30px;
+                height: 30px;
+                color: #495b76;
+            }
+        }
+    }
 }
 
 .feather {

@@ -1,2 +1,49 @@
 // Form
 // --------------------------------------------------
+
+.custom-form {
+    .form-row>div {
+        margin-bottom: rem(20px);
+    }
+
+    label {
+        font-size  : rem(14px);
+        line-height: 1.57;
+        color      : $bluey-grey;
+    }
+
+    .form-control,
+    .custom-select {
+        height          : 55px;
+        border-radius   : 6px;
+        background-color: #e0e7ff;
+    }
+
+    .dropdown-toggle {
+        height          : 55px;
+        border-color    : transparent;
+        background-color: #e0e7ff;
+
+        &:focus,
+        &:hover {
+            color           : $bluey-grey !important;
+            background-color: #e0e7ff !important;
+            box-shadow      : none !important;
+            border-color    : #e0e7ff !important;
+        }
+    }
+
+    .btn-primary {
+        height          : 55px;
+        border-radius   : 6px;
+        background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
+    }
+    .btn-outline-primary {
+        height          : 55px;
+        border-radius   : 6px;
+        &:hover {
+            background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
+        }
+    }
+}
+
