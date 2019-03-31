@@ -12,11 +12,11 @@
     $('.header__right').toggleClass('extend-header');
   })
 
-  $('.collapse-menu ').click(function(){
-    $('.header__icons').toggleClass('header__icons--show');
-    $('.content').toggleClass('visiable-header-icon');
-    $('.sidebar').toggleClass('visiable-header-icon');
-  })
+  // $('.collapse-menu ').click(function(){
+  //   $('.header__icons').toggleClass('header__icons--show');
+  //   $('.content').toggleClass('visiable-header-icon');
+  //   $('.sidebar').toggleClass('visiable-header-icon');
+  // })
 
 
   //---------- for icon ---------
