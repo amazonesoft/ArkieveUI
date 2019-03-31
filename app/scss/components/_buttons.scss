@@ -1,2 +1,30 @@
 // Button
 // --------------------------------------------------
+
+.add-new {
+    min-width: 146px;
+    height: 45px;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.38;
+    color: $white;
+    position: relative;
+    border-radius: 6px;
+    padding-left: 50px;
+    display: inline-flex;
+    align-items: center;
+    background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
+    &:hover {
+        color: $white;
+    }
+    &::before {
+        top: 11px;
+        left: 18px;
+        width: 24px;
+        height: 24px;
+        content: '';
+        position: absolute;
+        display: inline-block;
+        background: url('../images/icons/plus.png') no-repeat;
+    }
+}

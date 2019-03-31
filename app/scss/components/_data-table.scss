@@ -1,0 +1,38 @@
+//  Data Table
+// --------------------------------------------------
+
+.data-table {
+    width: 100%;
+    thead {
+        height: 55px;
+        background-color: #f4f6fc;
+    }
+    th,td {
+        padding: 10px;
+    }
+    th {
+        font-weight: 600;
+        color: #495b76;
+        font-size: rem(14px);
+    }
+    td {
+        font-size: 13px;
+        height: 55px;
+        color: #8593a8;  
+        border-bottom: 1px solid #f4f6fc;
+
+        a {
+            margin-left: 5px;
+            display:  inline-block;
+            transition: all 0.3s ease;
+            &:hover {
+                opacity: 0.8;
+            }  
+        }
+    }
+}
+
+.dataTables_wrapper {
+    color: #8593a8;
+    font-size: rem(14px);
+}
