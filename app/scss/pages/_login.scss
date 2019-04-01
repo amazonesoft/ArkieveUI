@@ -79,4 +79,7 @@
         color         : #495b76;
         margin-bottom : rem(20px);
     }
+    .input-validation-error {
+        border: 1px solid $danger !important;
+    }
 }

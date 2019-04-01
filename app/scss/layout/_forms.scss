@@ -32,5 +32,8 @@
             border-color    : #e0e7ff !important;
         }
     }
+    .input-validation-error {
+        border: 1px solid $danger !important;
+    }
 }
 
