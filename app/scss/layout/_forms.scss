@@ -32,18 +32,5 @@
             border-color    : #e0e7ff !important;
         }
     }
-
-    .btn-primary {
-        height          : 55px;
-        border-radius   : 6px;
-        background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
-    }
-    .btn-outline-primary {
-        height          : 55px;
-        border-radius   : 6px;
-        &:hover {
-            background-image: linear-gradient(to right, $cerulean-blue-two 18%, $water-blue);
-        }
-    }
 }
 
