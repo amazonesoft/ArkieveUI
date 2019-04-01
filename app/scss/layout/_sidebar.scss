@@ -178,7 +178,64 @@
             }
         }
 
+        &[data-toggle="collapse"] {
+            position: relative;
+
+            &::after {
+                top              : 25px;
+                left             : 220px;
+                content          : '';
+                position         : absolute;
+                width            : 16px;
+                height           : 9px;
+                display          : block;
+                background-repeat: no-repeat;
+            }
+
+            &:not(.collapsed) {
+                &::after {
+                    background-image: url('../images/icons/arrow-top.png');
+                }
+            }
+
+            &:not(.active) {
+                &::after {
+                    background-image: url('../images/icons/arrow-bottom.png');
+                }
+            }
+
+            &.collapsed {
+                &::after {
+                    background-image: url('../images/icons/arrow-bottom.png');
+                }
+            }
+        }
+
     }
+
+
+
+    .sub-menu {
+        list-style    : none;
+        padding-left  : 68px;
+        padding-top   : 15px;
+        padding-bottom: 15px;
+
+        a {
+            font-size  : rem(14px);
+            line-height: 2.86;
+            text-align : left;
+            color      : $bluey-grey;
+
+            &:hover,
+            &.active {
+                text-decoration: none;
+                color          : $cerulean-blue;
+            }
+        }
+
+    }
+
 }
 
 .sidebar-sticky {
