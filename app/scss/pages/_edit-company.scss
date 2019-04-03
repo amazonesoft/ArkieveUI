@@ -1,0 +1,54 @@
+// Edit company
+// --------------------------------------------------
+.upload-picture {
+    display  : flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    img {
+        width: 119px;
+        height: 119px;
+        margin-right: 15px;
+        margin-bottom: 1rem;
+    }
+
+    .custom-file {
+        width   : 277px;
+        height  : 50px;
+        cursor: pointer;
+        position: relative;
+        margin-right: 15px;
+        margin-bottom: 1rem;
+
+        input
+         {
+           position: absolute;
+           top: 0;
+           left: 0;
+            width         : 277px;
+            height        : 50px;
+            opacity: 0;
+            z-index: 1;
+        }
+
+        &::after {
+            width         : 277px;
+            height        : 50px;
+            content       : '';
+            display       : block;
+            top           : 0;
+            left          : 0;
+            pointer-events: none;
+            z-index: 2;
+            background    : url('../images/upload.png') no-repeat;
+        }
+    }
+
+    &__info {
+        flex: 1;
+        font-size  : 16px;
+        line-height: 1.38;
+        color      : $bluey-grey;
+        min-width: 250px;
+    }
+}
