@@ -26,7 +26,7 @@
         <div class="header__right">
 
             <div class="header__left d-flex align-items-center">
-                <span class="icon_menu"></span>               
+                <span class="icon_menu"></span>
             </div>
 
             <ul class="list-unstyled header__icons">
@@ -125,32 +125,85 @@
                     <div class="card p-5 bg-white">
 
 
-                        <section class="upload-picture">
-
-                            <img src="images/add-avatar.png" class="rounded-circle" alt="avatar" width="119" height="119" />
-
-                            <form>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="customFile">
-                                </div>
-                            </form>
-
-                            <p class="upload-picture__info">Drag and drop anywhere you want and start uploading your images now. <b>2 MB</b> limit.</p>
-
-                        </section>
+                        <img src="images/add-avatar.png" class="rounded-circle my-3" alt="avatar" width="119"
+                            height="119" />
 
 
                         <form class="custom-form ">
 
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <label for="companyName">Company name  *</label>
-                                    <input type="text" id="companyName" class="form-control" placeholder="company name" required
-                                        autofocus>
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Company name <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            Mobarak Ldt
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="email">Email </label>
-                                    <input type="email" class="form-control" id="email" placeholder="name@example.com">
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Email <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            mobarak.hossain811@gmail.com
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Address  <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            Ka 167/ kha 1 khilkhet bottola, Dhaka, Bangladesh
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Telephone number <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            00022566987
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+
+
+                            <div class="form-row">
+                                <div class="col-md-6">
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Contact person  <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            Shadiq ahmed
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Personal number <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            01923518465
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
 
@@ -158,55 +211,30 @@
 
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <label for="gender">Address *</label>
-                                    <select class="custom-select" id="address" required>
-                                        <option value="Ka 167/ kha 1 khilkhet bottola, Dhak..">Ka 167/ kha 1 khilkhet bottola, Dhak..</option>
-                                        <option value="Ka 167/ kha 1 khilkhet bottola, Dhak..">Ka 167/ kha 1 khilkhet bottola, Dhak..</option>
-                                    </select>
-
+                                    <div class="form-row">
+                                        <div class="col-md-5 data-title">
+                                            Company active/inactive  <span>*</span>
+                                        </div>
+                                        <div class="col-md-7 data-value">
+                                            Inactive
+                                        </div>
+                                    </div>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="telephone">Telephone number *</label>
-                                    <input type="text" id="telephone" class="form-control"
-                                        placeholder="telephone number" required>
+    
                                 </div>
                             </div>
-
 
 
 
 
                             <div class="form-row">
                                 <div class="col-md-6">
-                                    <label for="contactPerson">Contact person *</label>
-                                    <input type="text" id="contactPerson *" class="form-control" placeholder="Contact person" required
-                                        autofocus>
+                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Edit Company</button>
                                 </div>
                                 <div class="col-md-6">
-                                    <label for="personalNuumber *">Personal nuumber *</label>
-                                    <input type="text" id="personalNuumber" class="form-control"
-                                        placeholder="Personal nuumber" required>
-                                </div>
-                            </div>
-
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <label for="status">Company active/inactive *</label>
-                                    <select class="custom-select" id="status" required>
-                                        <option selected value="1">active</option>
-                                        <option value="2">Inactive</option>
-                                    </select>
-                                </div>
-                            </div>
-
-
-                            <div class="form-row">
-                                <div class="col-md-6">
-                                    <button class="btn btn-lg btn-primary btn-block" type="submit">Save</button>
-                                </div>
-                                <div class="col-md-6">
-                                    <button class="btn btn-lg btn-outline-primary btn-block"
-                                        type="submit">Cancel</button>
+                                    <button class="btn btn-lg btn-outline-primary btn-block" type="submit">Delete
+                                        Company</button>
                                 </div>
                             </div>
 
