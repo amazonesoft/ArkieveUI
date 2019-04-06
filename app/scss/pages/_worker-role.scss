@@ -1,0 +1,289 @@
+// Worker Role
+// --------------------------------------------------
+
+/* Variables
+================================== */
+/* Tables
+================================== */
+.rtable {
+    display  : flex;
+    flex-wrap: wrap;
+    margin   : 0 0 3em 0;
+    padding  : 0;
+}
+
+.rtable-cell {
+    box-sizing: border-box;
+    flex-grow : 1;
+    width     : 100%;
+    padding   : 0.8em 1.2em;
+    overflow  : hidden;
+}
+
+/* Table column sizing
+================================== */
+.rtable--2cols>.rtable-cell {
+    width: 50%;
+}
+
+.rtable--3cols>.rtable-cell {
+    width: 33.33%;
+}
+
+.rtable--4cols>.rtable-cell {
+    width: 25%;
+}
+
+.rtable--5cols>.rtable-cell {
+    width: 20%;
+}
+
+.rtable--6cols>.rtable-cell {
+    width: 16.6%;
+}
+
+/* Apply styles
+================================== */
+.rtable {
+    position: relative;
+    top     : 3px;
+    left    : 3px;
+}
+
+.rtable-cell {
+    margin          : -3px 0 0 -3px;
+    background-color: white;
+    border          : solid 3px white;
+    display         : flex;
+    align-items     : center;
+    font-size: 14px;
+    line-height: 1.57;
+    color: #495b76;
+    flex-wrap: wrap;
+    span {
+        margin-right: 8px;
+         margin-top: 2px;
+         margin-bottom: 2px;
+
+    }
+
+}
+
+.switch {
+         margin-top: 2px;
+         margin-bottom: 2px;
+}
+
+/* Cell styles
+================================== */
+
+.rtable-cell--head {
+    background-color: #f4f6fc;
+    font-size       : 15px;
+    font-weight     : 600;
+    line-height     : 1.47;
+    @media all and (max-width: 500px) {
+        display: none;
+   }
+}
+
+/* Responsive
+==================================== */
+@media all and (max-width: 500px) {
+    .rtable--collapse {
+        display: block;
+    }
+
+    .rtable--collapse>.rtable-cell {
+        width: 100% !important;
+        border-bottom: 4px solid #f9f9f9;
+    }
+
+    .rtable--collapse>.rtable-cell--foot {
+        margin-bottom: 1em;
+    }
+}
+
+.no-flexbox .rtable {
+    display: block;
+}
+
+.no-flexbox .rtable>.rtable-cell {
+    width: 100%;
+}
+
+.no-flexbox .rtable>.rtable-cell--foot {
+    margin-bottom: 1em;
+}
+
+@media all and (max-width: 500px) {
+    .hiddenSmall {
+        display: none;
+    }
+}
+
+/* accordion Styling
+==================================== */
+.accordion {
+    position        : relative;
+    top             : -3px;
+    left            : -3px;
+    width           : 100%;
+    margin          : 0 0 0.5em 0;
+    padding         : 0.6em 2em 0.6em 0.6em;
+    border-radius   : 0.5em;
+    text-align      : left;
+    border          : solid 3px rgba($cerulean-blue, 0.7);
+    background-color: $cerulean-blue;
+    font-weight     : bold;
+    color           : $white;
+    text-decoration : none;
+    transition      : background-color 0.1s;
+    cursor          : pointer;
+}
+
+@media all and (min-width: 500px) {
+    .accordion {
+        display: none;
+    }
+}
+
+.accordion:hover,
+.accordion:focus {
+    outline       : none;
+    -webkit-filter: contrast(150%);
+    filter        : contrast(150%);
+}
+
+.accordion[aria-selected="true"] {
+    margin-bottom             : 0;
+    border-bottom-left-radius : 0;
+    border-bottom-right-radius: 0;
+    border-bottom-width       : 0;
+    //background                : #f4f6fc;
+}
+
+.accordion:before {
+    content        : "+";
+    position       : absolute;
+    top            : 55%;
+    right           : 0.3em;
+    margin-top     : -1.14285714em;
+    font-weight    : normal;
+    font-size      : 2em;
+    line-height    : 2em;
+    background-size: 2em 2em;
+}
+
+.accordion[aria-selected="true"]:before {
+    content: "-";
+}
+
+.js-rtable-accordions {
+    min-width: 240px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.tgl {
+    display: none;
+}
+
+.tgl+.tgl-btn {
+    outline            : 0;
+    display            : block;
+    width              : 40px;
+    height             : 14px;
+    position           : relative;
+    cursor             : pointer;
+    -webkit-user-select: none;
+    -moz-user-select   : none;
+    -ms-user-select    : none;
+    user-select        : none;
+    margin-bottom: 0px;
+}
+
+.tgl+.tgl-btn:after,
+.tgl+.tgl-btn:before {
+    position: relative;
+    display : block;
+    content : "";
+    width   : 20px;
+    height  : 20px;
+}
+
+.tgl+.tgl-btn:after {
+    left: 0;
+    top: -7px;
+}
+
+.tgl+.tgl-btn:before {
+    display: none;
+}
+
+.tgl:checked+.tgl-btn:after {
+    left: 50%;
+}
+
+
+
+.tgl-ios+.tgl-btn {
+    background   : #f1f1f1;
+    border-radius: 2em;
+    padding      : 2px;
+    transition   : all .4s ease;
+    border       : 1px solid #e8eae9;
+}
+
+.tgl-ios+.tgl-btn:after {
+    border-radius: 2em;
+    transition   : left 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), padding 0.3s ease, margin 0.3s ease;
+    box-shadow         : 0 0 1px 0 rgba(0, 0, 0, 0.12), 0px 1px 1px 0 rgba(0, 0, 0, 0.24);
+    border-image-source: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.02) 87%, rgba(0, 0, 0, 0.04), rgba(140, 140, 140, 0.04));
+    background-color:  #f1f1f1;
+}
+
+.tgl-ios+.tgl-btn:hover:after {
+    will-change: padding;
+}
+
+.tgl-ios+.tgl-btn:active {
+    box-shadow: inset 0 0 0 2em #e8eae9;
+}
+
+.tgl-ios+.tgl-btn:active:after {
+    padding-right: .8em;
+}
+
+.tgl-ios:checked+.tgl-btn {
+    background: rgba($cerulean-blue, 0.5);
+}
+
+.tgl-ios:checked+.tgl-btn:after {
+    background: $cerulean-blue;
+}
+
+.tgl-ios:checked+.tgl-btn:active {
+    box-shadow: none;
+}
+
+.tgl-ios:checked+.tgl-btn:active:after {
+    margin-left: -.8em;
+}

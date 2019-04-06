@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>arkieve</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.18/css/dataTables.bootstrap4.min.css">
+
+</head>
+
+<body>
+
+
+    <header class="header fixed-top">
+        <a class="logo" href="#">
+            <img src="images/arkieve-logo.png" class="img-fluid" alt="arkieve-logo">
+        </a>
+        <!-- end logo -->
+        <div class="header__right">
+
+            <div class="header__left d-flex align-items-center">
+                <span class="icon_menu"></span>
+            </div>
+
+            <ul class="list-unstyled header__icons">
+                <li>
+                    <a class="nav-link schedule" href="#">
+                        <img src="images/icons/schedule.png" alt="schedule">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link bell notification" href="#">
+                        <img src="images/icons/bell.png" alt="bell">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link mail notification" href="#">
+                        <img src="images/icons/mail.png" alt="bell">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link pr-0 profile" href="#">
+                        <img src="images/icons/avatar.png" alt="avatar" width="36" height="36" class="rounded-circle">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-flex">
+
+
+
+                <!-- strat sidebar -->
+                <nav class="sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active home" href="#">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link availability" href="#">
+                                    Availability
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link schedule" href="#">
+                                    Schedule
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link user-management" href="#">
+                                    User Management
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link social-documentation" href="#">
+                                    Social Documentation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link sam" href="#">
+                                    SAM
+                                </a>
+                            </li>
+                            <li class="nav-item reports">
+                                <a class="nav-link reports" href="#">
+                                    Reports
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link administrator" href="#">
+                                    Administrator
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end nav/sidebar -->
+
+
+                <main role="main" class="content">
+
+                    <div class="page_title">
+                        <a href="#" class="page_title__back"><i data-feather="arrow-left"></i></a>
+                        Worker Role
+                    </div>
+
+                    <div class="card p-4 bg-white">
+
+
+
+
+
+
+                        <div class="rtable rtable--5cols rtable--collapse js-rtable-accordions">
+
+                            <button class="accordion" role="tab" aria-selected="true">Admin</button>
+                            <div class="rtable-cell  rtable-cell--head">
+                                Admin
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin view</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb1" type="checkbox" />
+                                    <label class="tgl-btn" for="cb1"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin create</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb2" type="checkbox" />
+                                    <label class="tgl-btn" for="cb2"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin update</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb3" type="checkbox" />
+                                    <label class="tgl-btn" for="cb3"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin delete</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb4" type="checkbox" />
+                                    <label class="tgl-btn" for="cb4"></label>
+                                </div>
+                            </div>
+
+
+                            <button class="accordion" role="tab" aria-selected="false">Worker</button>
+                            <div class="rtable-cell  rtable-cell--head">
+                                Admin
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin view</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb5" type="checkbox" />
+                                    <label class="tgl-btn" for="cb5"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                Admin create
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb6" type="checkbox" />
+                                    <label class="tgl-btn" for="cb6"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                <span>Admin update</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb7" type="checkbox" />
+                                    <label class="tgl-btn" for="cb7"></label>
+                                </div>
+                            </div>
+                            <div class="rtable-cell">
+                                <span> Admin delete</span>
+                                <div class="switch">
+                                    <input class="tgl tgl-ios" id="cb8" type="checkbox" />
+                                    <label class="tgl-btn" for="cb8"></label>
+                                </div>
+                            </div>
+
+
+
+
+
+                        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    </div>
+
+                </main>
+                <!-- end main -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Optional for iconc font -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <!-- Optional for Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+    <!-- Optional for data Table JS -->
+    <script src="https://cdn.datatables.net/1.10.18/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.18/js/dataTables.bootstrap4.min.js"></script>
+
+
+
+    <!-- custom JavaScript -->
+    <script src="js/dashboard.js"></script>
+    <script src="js/role.js"></script>
+
+
+
+</body>
+
+</html>
