@@ -2,7 +2,8 @@
 // --------------------------------------------------
 
 .custom-form {
-    .form-row>div ,
+
+    .form-row>div,
     .row>div {
         margin-bottom: rem(20px);
     }
@@ -18,9 +19,10 @@
         height          : 55px;
         border-radius   : 6px;
         background-color: #e0e7ff;
+
         &::placeholder {
             color: #b6b9bb;
-    }
+        }
     }
 
     .dropdown-toggle {
@@ -36,14 +38,40 @@
             border-color    : #e0e7ff !important;
         }
     }
+
     .input-validation-error {
         border: 1px solid $danger !important;
     }
+
     .btn {
         margin-top: 15px;
     }
+
     .input-group-prepend .btn {
         margin-top: 0;
     }
-}
 
+    //--------.SumoSelect
+    .SumoSelect {
+        display: block;
+        width  : 100%;
+    }
+
+    .SumoSelect>.CaptionCont>label>i {
+        top: 12px;
+    }
+
+    .SelectBox {
+        width           : 100%;
+        display         : block;
+        color           : #495057;
+        line-height     : 44px;
+        height          : 55px !important;
+        border-radius   : 6px !important;
+        background-color: #e0e7ff !important;
+
+        &::placeholder {
+            color: #b6b9bb;
+        }
+    }
+}
