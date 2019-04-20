@@ -77,6 +77,7 @@
     }
     .schedule_row {
         display: flex;
+        font-size: rem(15px);
         margin-bottom: 20px;
     }
     .current-time,
@@ -99,5 +100,26 @@
     .btn {
         width: 120px;
         height: 40px;
+    }
+}
+.notification-dropdown {
+    .dropdown-menu {
+        top: 25px !important;
+        width: 329px;
+        height: 303px;
+        border-radius: 6px;
+        padding: 25px;
+        box-shadow: 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
+         @include scrollbars(.5em, slategray);
+    }
+    p {
+        font-size: rem(15px);
+        color: $bluey-grey;
+        b{
+            color: #495b76;
+        }
+        a {
+            color: $bluey-grey;
+        }
     }
 }
