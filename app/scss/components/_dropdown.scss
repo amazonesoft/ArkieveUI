@@ -66,3 +66,38 @@
         }
     }
 }
+.schedule-dropdown {
+    .dropdown-menu {
+        top: 25px !important;
+        width: 329px;
+        height: 201px;
+        border-radius: 6px;
+        padding: 25px;
+        box-shadow: 0px 3px 16px 0 rgba(231, 235, 240, 0.28);
+    }
+    .schedule_row {
+        display: flex;
+        margin-bottom: 20px;
+    }
+    .current-time,
+    .time-value {
+        color: $cerulean-blue;
+        flex: 1;
+    }
+    .time-value,
+    .working_time_val {
+        text-align: right;
+    }
+    .working_time_val {        
+        flex: 1;
+        color: $bluey-grey;
+    }
+    .working_time{        
+        flex: 2;
+        color: $bluey-grey;
+    }
+    .btn {
+        width: 120px;
+        height: 40px;
+    }
+}
