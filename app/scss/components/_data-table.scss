@@ -19,6 +19,7 @@
         font-size: 13px;
         height: 55px;
         color: #8593a8;  
+        max-width: 300px;
         border-bottom: 1px solid #f4f6fc;
 
         a {
@@ -28,6 +29,9 @@
             &:hover {
                 opacity: 0.8;
             }  
+            &:last-child{
+                margin-right: 0px;
+            }
         }
     }
 }
