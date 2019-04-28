@@ -8,3 +8,19 @@ tr.active {
         //color: #8593a8 !important;
     }
 }
+
+.read-message {
+    span {
+        display: block;
+        color: $bluey-grey;
+        font-size: rem(14px);
+    }
+    b,p {
+        color: #495b76;
+        font-weight: bold;
+        font-size: rem(14px);
+    }
+    p ,.row {
+        margin-bottom: 30px;
+    }
+}
