@@ -178,6 +178,21 @@
             }
         }
 
+         &.messaging {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 19px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/mail.png');
+            }
+
+            &.active {
+                background-image: url('../images/icons/mail.png');
+            }
+        }
+
         &[data-toggle="collapse"] {
             position: relative;
 
