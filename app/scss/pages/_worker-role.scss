@@ -183,7 +183,9 @@
     min-width: 240px;
 }
 
-
+.rtable-cell span {
+    min-width: calc(100% - 50px);
+}
 
 
 

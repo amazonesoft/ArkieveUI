@@ -4,5 +4,53 @@
 .cookie-toolbar {
   width: 100%;
   height: 92px;
+  padding-left: 150px;
+  padding-right: 150px;
+  overflow: hidden;
   background-image: linear-gradient(248deg,$cerulean-blue-two, $water-blue);
+
+  &__text {
+    float: left;
+      p {
+        font-size: rem(14px);
+        line-height: 2.14;
+        letter-spacing: 0.4px;
+        text-align: left;
+        color: $white;
+      }
+  }
+  &__btn {
+    float: right;
+  }
+  .accept {
+      width: 130px;
+      height: 42px;
+      border-radius: 21px;
+      background-color: $white;
+      font-size: rem(14px);
+      font-weight: 500;
+      letter-spacing: 0.4px;
+      text-align: center;
+      color: $cerulean-blue;
+      display: inline-block;
+  }
+  .decline {
+    width: 130px;
+    height: 42px;
+    border-radius: 21px;
+    border: solid 1px $white;
+
+
+
+  font-size: rem(14px);
+  font-weight: 500;
+  letter-spacing: 0.4px;
+  text-align: center;
+  color: $white;
 }
+
+
+
+
+
+  }
