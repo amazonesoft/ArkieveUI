@@ -1,0 +1,115 @@
+// calender-view
+// --------------------------------------------------
+#calendar .fc-header-toolbar .fc-left .fc-button-group {
+    width           : 111px;
+    height          : 48px;
+    border-radius   : 24px;
+    overflow        : hidden;
+    background-image: linear-gradient(96deg, $cerulean-blue-two, $water-blue);
+
+    .fc-button-primary {
+        background-color: transparent;
+        border-color    : transparent;
+
+        &:hover {
+            background-image: linear-gradient(96deg, #1884e0, #055be8);
+        }
+    }
+}
+
+#calendar .fc-header-toolbar .fc-center h2 {
+    font-family   : Poppins;
+    font-size     : 24px;
+    font-weight   : 600;
+    letter-spacing: 0.6px;
+    color         : #495b76;
+}
+
+
+
+#calendar .fc-view-container .fc .fc-row .fc-content-skeleton table,
+#calendar .fc-view-container .fc .fc-row .fc-content-skeleton td,
+#calendar .fc-view-container .fc .fc-row .fc-mirror-skeleton td {
+    font-family: Poppins;
+    font-size  : 16px;
+    line-height: 1.38;
+    color      : #495b76;
+}
+
+
+
+#calendar .fc-header-toolbar .fc-right {
+    .fc-button {
+        width           : 106px;
+        height          : 48px;
+        margin-right    : 10px;
+        border-radius   : 24px !important;
+        background-color: #ebf2fd;
+        border-color    : transparent !important;
+        font-family     : Poppins;
+        font-size       : 14px;
+        font-weight     : 500;
+        letter-spacing  : 0.4px;
+        text-align      : center;
+        color           : $cerulean-blue;
+        transition      : all 0.3s;
+
+        &.fc-button-active,
+        &:hover {
+            color           : $white;
+            background-image: linear-gradient(96deg, $cerulean-blue-two, $water-blue);
+        }
+    }
+}
+
+#calendar .fc-view-container .fc-dayGrid-view td.fc-week-number {
+    width           : 114px !important;
+    background-color: #ebf2fd !important;
+}
+
+#calendar .fc-view-container .fc-dayGrid-view th.fc-week-number,
+#calendar .fc-view-container .fc-dayGrid-view th.fc-day-number {
+    width: 114px !important;
+}
+
+#calendar .fc-view-container .fc .fc-row .fc-content-skeleton table,
+#calendar .fc-view-container .fc .fc-row .fc-content-skeleton td,
+#calendar .fc-view-container .fc .fc-row .fc-mirror-skeleton td {
+    text-align: center;
+}
+
+#calendar .fc-view-container .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
+    float      : none;
+    line-height: 100px;
+}
+
+#calendar .fc-view-container .fc-day-header {
+    font-family: Poppins;
+    font-size  : 18px;
+    font-weight: 600;
+    line-height: 1.22;
+    text-align : center;
+    color      : #495b76;
+}
+
+#calendar .fc-view-container .fc-unthemed th,
+#calendar .fc-view-container .fc-unthemed td,
+#calendar .fc-view-container .fc-unthemed thead {
+    border-color: transparent !important;
+}
+
+#calendar .fc-view-container {
+
+    .fc-unthemed th,
+    .fc-unthemed td,
+    .fc-unthemed thead,
+    .fc-unthemed tbody,
+    .fc-unthemed .fc-divider,
+    .fc-unthemed .fc-row,
+    .fc-unthemed .fc-content,
+    .fc-unthemed .fc-popover,
+    .fc-unthemed .fc-list-view,
+    .fc-unthemed .fc-list-heading td {
+        border-style: dotted !important;
+    }
+}
