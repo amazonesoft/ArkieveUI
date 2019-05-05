@@ -10,56 +10,44 @@
         background-color: #ebf2fd;
         font-family     : Poppins;
         font-size       : 14px;
-        font-weight     : 500;
         letter-spacing  : 0.4px;
         color           : $cerulean-blue;
         border          : 0;
+
+        &.active {
+            color:$white;
+            background-image: linear-gradient(96deg, $cerulean-blue-two, $water-blue);
+        }
     }
 
     .dhx_cal_date {
         font-family   : Poppins;
-        font-size     : 24px;
         font-weight   : 600;
-        letter-spacing: 0.6px;
         color         : #495b76;
-        padding-left  : 100px;
+       // padding-left  : 100px;
     }
 
     .dhx_scale_bar {
         font-family: Poppins;
-        font-size  : 18px;
         font-weight: 600;
-        line-height: 1.22;
         color      : #495b76;
     }
 
     .dhx_cal_event_clear {
         font-family: Poppins;
-        font-size  : 14px;
-        line-height: 1.71;
         text-align : left;
         color      : $cerulean-blue;
     }
 
     .dhx_month_head {
         font-family: Poppins;
-        font-size  : 16px;
-        line-height: 1.38;
         text-align : center;
         color      : #495b76;
     }
 
     .dhx_cal_today_button {
-        background   : #055be8;
-        color        : #fff;
-        border-radius: 0;
-    }
-
-    .dhx_cal_today_button {
         font-family   : Poppins;
-        font-size     : 14px;
         font-weight   : 500;
-        letter-spacing: 0.4px;
         text-align    : center;
         color         : #495b76;
 

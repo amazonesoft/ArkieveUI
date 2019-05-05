@@ -7,6 +7,14 @@
     @include media-breakpoint-up(lg) {
         padding: 100px;
     }
+    &.scheduler-container {
+        @include media-breakpoint-up(lg) {
+            padding: 15px;
+        }
+        .page_title {
+            margin-top: 0px !important;
+        }
+    }
 
     @include media-breakpoint-down(md) {
         padding-top   : 15px;
