@@ -2,8 +2,17 @@
 // --------------------------------------------------
 .content {
     flex      : 1;
-    padding: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     transition: all 0.4s ease;
+    @include media-breakpoint-down(md) {
+        padding-left: 0;
+        padding-right: 0;
+    }
+     @include media-breakpoint-up(lg) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
 
     // @include media-breakpoint-up(lg) {
     //     padding: 100px;

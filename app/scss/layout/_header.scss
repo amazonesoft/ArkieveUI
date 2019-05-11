@@ -14,8 +14,8 @@
         justify-content: space-between;
 
         @include media-breakpoint-up(lg) {
-            padding-left : 100px;
-            padding-right: 100px;
+            padding-left : 30px;
+            padding-right: 30px;
         }
 
         @include media-breakpoint-down(md) {
@@ -123,6 +123,12 @@
         text-align: left;
         color: #495b76;
         margin-bottom: 0;
+
+        @include media-breakpoint-down(md) {
+            font-size: 12px;
+            max-height: 44px;
+            overflow: hidden;
+        }
     }
 }
 

@@ -1,12 +1,12 @@
 // Scheduler
 // --------------------------------------------------
 .card #scheduler_here {
-    overflow: auto !important;
+    overflow: visible !important;
     .dhx_cal_tab {
         width           : 80px;
-        height          : 42px;
+        height          : 32px;
         margin-right    : 10px;
-        line-height     : 42px;
+        line-height     : 32px;
         border-radius   : 24px;
         background-color: #ebf2fd;
         font-family     : Poppins;
@@ -14,6 +14,10 @@
         letter-spacing  : 0.4px;
         color           : $cerulean-blue;
         border          : 0;
+
+        @include media-breakpoint-down(md) {   
+            width           : 65px;
+        }
 
         &.active {
             color:$white;
