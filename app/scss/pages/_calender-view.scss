@@ -65,6 +65,7 @@
 #calendar .fc-view-container .fc-dayGrid-view td.fc-week-number {
     width           : 114px !important;
     background-color: #ebf2fd !important;
+    line-height: 84px;
 }
 
 #calendar .fc-view-container .fc-dayGrid-view th.fc-week-number,
@@ -80,7 +81,7 @@
 
 #calendar .fc-view-container .fc-ltr .fc-dayGrid-view .fc-day-top .fc-day-number {
     float      : none;
-    line-height: 100px;
+    line-height: 84px;
 }
 
 #calendar .fc-view-container .fc-day-header {
@@ -111,5 +112,15 @@
     .fc-unthemed .fc-list-view,
     .fc-unthemed .fc-list-heading td {
         border-style: dotted !important;
+    }
+}
+#calendar {
+    .fc .fc-row .fc-content-skeleton td,
+    .fc .fc-row .fc-mirror-skeleton td {
+        text-align: center;
+        line-height: 84px;
+        a {
+            float: none;
+        }
     }
 }
