@@ -1,6 +1,7 @@
 // Scheduler
 // --------------------------------------------------
 .card #scheduler_here {
+    overflow: auto !important;
     .dhx_cal_tab {
         width           : 80px;
         height          : 42px;
@@ -24,6 +25,8 @@
         font-family   : Poppins;
         font-weight   : 600;
         color         : #495b76;
+        top: -30px;
+        text-align: left;
        // padding-left  : 100px;
     }
 
@@ -55,6 +58,19 @@
             background-color: #fff;
             color           : #055be8;
         }
+        top: -30px !important;
+    }
+    .dhx_cal_prev_button,
+    .dhx_cal_next_button {
+        top: -30px !important;
     }
 
+}
+.scheduler-filter {
+    padding-bottom: 50px;
+    .form-control {
+        @include media-breakpoint-down(md) {
+            margin-bottom: 10px;
+        }
+    }
 }

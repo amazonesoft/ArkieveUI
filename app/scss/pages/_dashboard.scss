@@ -2,18 +2,19 @@
 // --------------------------------------------------
 .content {
     flex      : 1;
+    padding: 15px;
     transition: all 0.4s ease;
 
-    @include media-breakpoint-up(lg) {
-        padding: 100px;
-    }
+    // @include media-breakpoint-up(lg) {
+    //     padding: 100px;
+    // }
     &.scheduler-container {
-        @include media-breakpoint-up(lg) {
-            padding: 15px;
-        }
-        .page_title {
-            margin-top: 0px !important;
-        }
+        // @include media-breakpoint-up(lg) {
+        //     padding: 15px;
+        // }
+        // .page_title {
+        //     margin-top: 0px !important;
+        // }
     }
 
     @include media-breakpoint-down(md) {
@@ -32,8 +33,9 @@
         font-size: rem(24px);
         margin-bottom: 30px;
         overflow: hidden;
+        margin-top: 15px;
         @include media-breakpoint-up(lg) {
-            margin-top: -50px;
+           // margin-top: -50px;
         }
         &__back {
             .feather-arrow-left {
