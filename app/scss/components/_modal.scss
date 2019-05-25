@@ -1,0 +1,29 @@
+// modal
+// --------------------------------------------------
+
+//acceprrejectModal
+.acceprrejectModal {
+    .modal-header {
+        padding-left : 30px;
+        padding-right: 30px;
+    }
+}
+
+#accept_worker {
+    padding-left : 30px;
+    padding-right: 30px;
+
+    .custom-form .form-row>div,
+    .custom-form .row>div {
+        margin-bottom: 10px;
+    }
+}
+
+#accept_footer {
+    border         : 0;
+    justify-content: center;
+
+    .btn {
+        min-width: 130px;
+    }
+}
