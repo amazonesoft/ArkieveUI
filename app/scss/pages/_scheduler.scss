@@ -46,6 +46,12 @@
         color      : $cerulean-blue;
     }
 
+    .dhx_cal_event_clear.dhx_cal_event_line_start.dhx_cal_event_line_end {
+        border-radius: 14px;
+        text-align: center;
+        color: $white !important;
+    }
+
     .dhx_month_head {
         font-family: Poppins;
         text-align : center;
