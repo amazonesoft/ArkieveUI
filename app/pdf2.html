@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    <title>arkieve</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+
+
+    <header class="header fixed-top">
+        <a class="logo" href="#">
+            <img src="images/arkieve-logo.png" class="img-fluid" alt="arkieve-logo">
+        </a>
+        <!-- end logo -->
+        <div class="header__right">
+
+            <div class="header__left d-flex align-items-center">
+                <span class="icon_menu"></span>                
+                <h3 class="header__title">Welcome to mobarak hossain</h3>
+            </div>
+
+            <ul class="list-unstyled header__icons">
+                <li>
+                    <a class="nav-link schedule" href="#">
+                        <img src="images/icons/schedule.png" alt="schedule">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link bell notification" href="#">
+                        <img src="images/icons/bell.png" alt="bell">
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link mail notification" href="#">
+                        <img src="images/icons/mail.png" alt="bell">
+                    </a>
+                </li>
+                <li class="dropdown profile-dropdown">
+                    <a class="nav-link pr-0 profile" href="#" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <img src="images/icons/avatar.png" alt="avatar" width="36" height="36" class="rounded-circle">
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownMenuButton">
+                        <a class="dropdown-item profile active" href="#">Profile</a>
+                        <a class="dropdown-item password" href="#">Change Password</a>
+                        
+                        <form>
+                            <button type="submit" class="dropdown-item log-out">Log Out</button>
+                        </form>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </header>
+    <!-- end header -->
+
+
+
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col d-flex">
+
+
+
+                <!-- strat sidebar -->
+                <nav class="sidebar">
+                    <div class="sidebar-sticky">
+                        <ul class="nav flex-column">
+                            <li class="nav-item">
+                                <a class="nav-link active home" href="#">Home
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link availability" href="#">
+                                    Availability
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link schedule" href="#">
+                                    Schedule
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link user-management active"  data-toggle="collapse" href="#userManagementDropDown">
+                                    User Management
+                                    <span class="sr-only">(current)</span>
+                                </a>
+                                <ul class="collapse sub-menu" id="userManagementDropDown">
+                                    <li><a  href="#"> Admin</a> </li>
+                                    <li><a href="#">Company</a></li>
+                                    <li><a  href="#">Workers</a></li>
+                                    <li><a  href="#">Customers</a></li>
+                                </ul>
+
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link social-documentation" href="#">
+                                    Social Documentation
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link sam" href="#">
+                                    SAM
+                                </a>
+                            </li>
+                            <li class="nav-item reports">
+                                <a class="nav-link reports" href="#">
+                                    Reports
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link administrator" href="#">
+                                    Administrator
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- end nav/sidebar -->
+
+
+                <main role="main" class="content">
+                    <div class="page_title">
+                        <a href="#" class="page_title__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>
+                        Back
+
+                        <div class="pdf_title">
+                            <select class="custom-select user-select">
+                                <option selected="">Select user</option>
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                            </select>
+                            <a href="#" class="btn download">Download</a>
+                        </div>
+                    </div>
+
+
+                    <div class="card pdf-wrapper">
+
+
+                        <header>
+                            <div class="pdf-container clearfix">
+                                <div class="left w-50">
+                                    <figure>
+                                        <img class="pdf-logo"
+                                            src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATkAAAAtCAYAAADV0RzIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABosSURBVHhe7d2Hsy1FEQdg/wuLKkVAogRJkkUQDKgkyTkISAYRAQUDUYJKpshKjopkJCtIlBxFQYIKKpKDxLW+repTfebtCTfz7tup2rrv7e7s9PR0/6bT7vlY1baWAy0HWg5MYw58bBrPrZ1ay4GWAy0HqhbkWiFoOdByYFpzoAW5ab287eRaDrQc6AK5W265pVp22WWrueeeu5pnnnmm5JhvvvmqHXbYoXr55Zfb1Wk50HKg5cCYOdAFcuedd1612GKL1eAGbCb7mHfeeSvHmmuuWT399NNjnlz7gJYDLQdaDnSB3Pe///0a4JZZZplqt912m/Tji1/8Ysd6vO2229rVaTnQcqDlwJg50AhyW265ZfXKK6/ULuNIjtH08fz//ve/1Z133lmtv/76HZDjOret5UDLgZYDY+VAI8ix4iarvf/++9Xtt99e7bzzzrWrypL0twW5yVqBdpyWA9ObA1MOco899lj1zW9+s5prrrm6Eh0tyE1vwWtn13JgsjgwZSD3wQcfVE899VT13e9+t/r0pz/dBXCtJTdZy9+O03Jg+nNgSkAOwN1///3VnnvuWWdwm8pVWktu+gtfO8OWA5PBgSkBuSeffLLaaKONZrDgAuxaS24ylr4do+XArMGBSQU5Ftzf//73at999+0JcG3iYdYQvHaWLQcmiwOTBnIA7vHHH69++MMfVvPPP//Atylad3WyRKAdp+XA9ObAqEHuww8/rOvbXnzxxaGOP//5z9UWW2wxQxa1KR7XuqvTW+ja2bUcmEwOjBrkXn/99eroo4+ufvaznw08jjjiiBrgyixqr/djxwPkFBn/+9//HvEBuAG4xvoE4vk57733XqW2rzzv3FQ19L700ktddL711lv1PDIf/vWvf1XvvPNOF5lvvPFGV79XX311QqehYDzzE53TpZUyV/J6usxzZptHI8jtvvvuA+cheQCk1LctsMAC1cILL9z3+MxnPjPQRR3PxMMvf/nL6sADDxzxcfzxx3eA4M0336x+/vOfdz3j+eefr4EDuOfnA72pau+++2510kkndejZf//9q7vvvrty/vTTT68OOOCA+tqP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"
+                                            alt="Fastställd av Försäkringskassan">
+                                    </figure>
+                                    <div class="company-address">
+                                        <p>0771-17 90 00</p>
+                                        <p><a href="www.forsakringskassan.se">www.forsakringskassan.se</a></p>
+                                    </div>
+                                </div>
+
+                                <div class="left w-50 date-section">
+                                    <h2 class="title">Räkning</h2>
+                                    <h4>Assistansersättning</h4>
+                                    <p>Uppgifter om en personlig assistent</p>
+                                    <table  cellspacing="0" cellpadding="0" class="date-table">
+                                        <tbody>						
+                                            <tr>
+                                                <td>
+                                                    1
+                                                </td>
+                                                <td>
+                                                    2
+                                                </td>
+                                                <td>
+                                                    3
+                                                </td>
+                                                <td>
+                                                    4
+                                                </td>
+                                                <td>
+                                                    5
+                                                </td>
+                                                <td>
+                                                    6
+                                                </td>
+                                            </tr>									
+                                        </tbody>
+                                    </table>
+                                    <div class="date-data">
+                                        <p><small>Skicka blanketten till</small></p>
+                                        <p>Försäkringskassans inläsningscentral</p>
+                                        <p>839 88 Östersund</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </header>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>1. Du som har personlig assistans</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td width="70%">
+                                                <span class="data-title">Förnamn och efternamn</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td>
+                                                <span class="data-title">Personnummer (12 siffror)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>2. Redovisning av all utförd assistans under månaden</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="data-title">Aktiv tid</span>
+                                                <div class="clearfix">
+                                                    <div class="w-50 left">
+                                                        <span class="data-title">timmar</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                    <div class="w-50 left">									
+                                                        <span class="data-title">minuter</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="data-title">Väntetid, faktiska timmar</span>
+                                                <div class="clearfix">
+                                                    <div class="w-50 left">
+                                                        <span class="data-title">timmar</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                    <div class="w-50 left">									
+                                                        <span class="data-title">minuter</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <span class="data-title">Beredskapstid, faktiska timmar</span>
+                                                <div class="clearfix">
+                                                    <div class="w-50 left">
+                                                        <span class="data-title">timmar</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                    <div class="w-50 left">									
+                                                        <span class="data-title">minuter</span>
+                                                        <span class="data-value"></span>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>3. Har assistans utförts i barnomsorg, skola eller daglig verksamhet</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="check w-15">Ja</span>
+                                                <span class="uncheck">Nej</span>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>4. Har du vårdats på sjukhus den här månaden?</caption>
+                                    <tbody>
+                                        <tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                        <tr>
+                                            <td colspan="12">
+                                                <span class="uncheck">Nej</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="1" rowspan="3" class="no-brb vtop">
+                                                <span class="uncheck">Ja</span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-title">Från och med (år, månad, dag)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="data-title">Klockslag</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-title">Till och med (år, månad, dag)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-title">Klockslag</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>						
+                                            <td colspan="3">							
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                        <tr>						
+                                            <td colspan="3">							
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="2">
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>5. Har du vistats i ett land utanför EES-området och anlitat en assistent på plats?</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td class="w-15">
+                                                <span class="uncheck">Ja</span>
+                                            </td>
+                                            <td>
+                                                <span class="data-title">Bifoga en förklaring till varför du behövde anlita en assistent på plats. Skicka också in handlingar som styrker dina uppgifter.</span>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>6. Fyll i här om du har köpt assistans och fått ersättning i efterskott</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="data-title">Har du använt föregående månads utbetalning till köp av personlig assistans?</span>
+                                                <span class="check w-15">Ja</span>
+                                                <span class="uncheck">Nej, det finns________kronor kvar.</span>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>7. Underskrift</caption>
+                                    <tbody>
+                                        <tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                        <tr>
+                                            <td colspan="12">
+                                                <span class="data-title">Jag försäkrar på heder och samvete att uppgifterna i blanketten är riktiga och fullständiga. </span>
+                                                <span class="data-title">När uppgifterna förändras måste jag meddela Försäkringskassan. Jag vet att det är straffbart att lämna felaktiga uppgifter,  att utelämna något eller att inte meddela Försäkringskassan när uppgifterna jag lämnat förändras.</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="3">
+                                                <span class="data-title">Datum (år, månad, dag)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="6">
+                                                <span class="data-title">Namnteckning </span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-title">Telefon, även riktnummer</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>8. Fyll i här om du som skrivit under är ställföreträdare</caption>
+                                    <tbody>
+                                        <tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                        <tr>
+                                            <td colspan="12">
+                                                <span class="w-15 left">Jag är </span>
+                                                <span class="uncheck w-25">vårdnadshavare</span>
+                                                <span class="uncheck w-25">god man</span>
+                                                <span class="uncheck">förvaltare </span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="9">
+                                                <span class="data-title">Namnförtydligande</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td colspan="3">
+                                                <span class="data-title">Personnummer (12 siffror </span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <h3 class="table-title">Redovisning av kostnader</h3>
+                            <div class="grey-box">
+                                <p>Du ska redovisa dina kostnader i följande situationer: </p>
+                                <p>Om du själv har anställt dina assistenter ska du alltid redovisa dina kostnader för sådana assistenter.  Detsamma gäller om du har beviljats assistansersättning med ett högre timbelopp eller har ansökt om högre timbelopp för tid före beslut och beslut ännu inte har fattats. Du ska även redovisa dina kostnader om du har  eller kan ha rätt till utbetalning med ett skäligt belopp för assistans anlitad utanför EES. </p>
+                                <p>Om du får ersättningen i förskott ska du redovisa i slutet av perioden. Om du får ersättningen i efterskott ska  du redovisa varje månad.  </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>9. Redovisa dina kostnader</caption>
+                                    <tbody>
+                                        <tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+                                        <tr>
+                                            <td colspan="4">
+                                                <b>Typ av kostnad</b>
+                                            </td>
+                                            <td colspan="3">
+                                                <b>Kostnad per timme</b>
+                                            </td>
+                                            <td colspan="3">
+                                                <b>Kostnad för perioden</b>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Lön (utom OB-tillägg) och lönebikostnader </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Lön i form av OB-tillägg </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Assistansomkostnader </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Utbildningskostnader </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Arbetsmiljöinsatser och personalomkostnader </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title">Administrationskostnader </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value">kronor</span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title"><b>Summa kostnad för assistansen:</b> </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value"><b>kronor</b></span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value"><b>kronor</b></span>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td colspan="4" class="bottom-left">
+                                                <span class="data-title"><b>Antal utförda timmar under perioden som kostnaden är beräknad på:</b> </span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                <span class="data-value"><b>kronor</b></span>
+                                            </td>
+                                            <td colspan="3" class="bottom-right">
+                                                
+                                            </td>
+                                        </tr>
+                                        
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+
+                        <h3 class="table-title pb-15">10. Fyll i här om du får ersättning i förskott</h3>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption><small>10.a Uppgift om perioden</small></caption>
+                                    <tbody>
+                                        <tr>
+                                            <td width="70%">
+                                                <span class="data-title">Från och med (månad)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                            <td>
+                                                <span class="data-title">Till och med (månad)</span>
+                                                <span class="data-value"></span>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>10.b Finns det pengar kvar som du inte har använt för att köpa personlig assistans?</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <span class="check w-15">Ja</span>
+                                                <span class="uncheck">Nej, det finns________kronor kvar.</span>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="grey-box">
+                                <p>När vi har fått din redovisning kommer vi att göra en slutavräkning. Det innebär att vi jämför den ersättning du har fått med den som du har redovisat. Om du inte har använt all ersättning till din personliga assistans under perioden så ska du betala tillbaka överskottet. Vi behöver veta hur du i så fall vill att det ska gå till. </p>
+                            </div>
+                        </section>
+
+                        <section>
+                            <div class="pdf-container clearfix">
+                                <table  cellspacing="0" cellpadding="0" class="pdf-table">
+                                    <caption>10.c Hur vill du betala tillbaka eventuellt för mycket utbetald ersättning?</caption>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="check pb-10">Jag vill att Försäkringskassan drar av eventuellt för mycket utbetald ersättning för den här perioden på kommande utbetalningar.</div>
+                                                <div class="uncheck pb-10">Jag vill att Försäkringskassan prövar om jag är återbetalningsskyldig om det har utbetalats för mycket ersättning för den här perioden. </div>
+                                            </td>
+                                        </tr>				
+                                    </tbody>
+                                </table>
+                            </div>
+                        </section>
+
+
+                    </div>
+
+
+                </main>
+                <!-- end main -->
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!-- Optional for iconc font -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js"></script>
+    <!-- Optional for Chart JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js"></script>
+
+
+
+    <!-- custom JavaScript -->
+    <script src="js/dashboard.js"></script>
+</body>
+
+</html>

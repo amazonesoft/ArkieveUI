@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>pdf1</title>
+	<title>pdf2</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<style type="text/css">
@@ -13,7 +13,8 @@
 		}
 
 		html {
-		    font-size: 100% line-height: 1;
+		    font-size: 100%;
+			line-height: 1;
 		}
 
 		body {
@@ -68,6 +69,12 @@
 		.w-50 {
 		    width: 50%;
 		}
+		.w-15 {
+			width: 15%;
+		}
+		.w-25 {
+			width: 25%;
+		}
 
 		.pl {
 		    padding-left: 15px;
@@ -93,9 +100,6 @@
 		    vertical-align: top;
 		}
 
-
-
-
 		/*----------- header ---------*/
 
 		header {
@@ -117,11 +121,15 @@
 		    margin-bottom: 5px;
 		}
 
-		caption {
+		caption,.table-title {
 		    font-size     : 20px;
 		    padding-bottom: 5px;
 		    font-weight   : bold;
 		    text-align    : left;
+			padding-left: 10px;
+		}
+		caption small {
+			font-size: 18px;
 		}
 
 		/*----------- grey box ---------*/
@@ -134,6 +142,9 @@
 		    font-size       : 18px;
 		    line-height     : 26px;
 		    background-color: #f3f3f3;
+		}
+		.table-title + .grey-box {
+			margin-top: 0;
 		}
 
 		.grey-box ul {
@@ -232,6 +243,47 @@
 		        /*Firefox*/
 		    }
 		}
+		/* --- date table --- */
+		.date-table {
+			width: 180px;
+			margin-top:15px;
+			border: 1px solid #cccccc;
+		}
+		.date-table	td{
+			padding: 3px;
+			min-width: 16px;
+			height: 40px;
+			text-align: center;
+			border-right: 1px solid #cccccc;
+		}
+		.date-table	td:last-child{
+			border-right: 0;
+		}
+		.date-data {
+			padding-left: 15px;
+			padding-top: 20px;
+		}
+		.date-section h4 {
+			margin-bottom: 10px;
+		}
+		.bottom-right {
+			vertical-align: bottom;
+			text-align:right;
+		}
+		.bottom-left {
+			vertical-align: bottom;
+			text-align:left;
+		}
+		.bottom-left .data-title {
+			padding-bottom: 0;
+			padding-top: 5px;
+		}
+		.pb-15 {
+			padding-bottom : 15px !important;
+		}
+		.pb-10 {
+			padding-bottom : 10px !important;
+		}
 	</style>
 </head>
 
@@ -250,55 +302,51 @@
 				</div>
 			</div>
 
-			<div class="left w-50">
-				<h2 class="title">Anmälan från arbetsgivare</h2>
+			<div class="left w-50 date-section">
+				<h2 class="title">Räkning</h2>
+				<h4>Assistansersättning</h4>
 				<p>Uppgifter om en personlig assistent</p>
+				<table  cellspacing="0" cellpadding="0" class="date-table">
+					<tbody>						
+						<tr>
+							<td>
+								1
+							</td>
+							<td>
+								2
+							</td>
+							<td>
+								3
+							</td>
+							<td>
+								4
+							</td>
+							<td>
+								5
+							</td>
+							<td>
+								6
+							</td>
+						</tr>									
+					</tbody>
+				</table>
+				<div class="date-data">
+					<p><small>Skicka blanketten till</small></p>
+					<p>Försäkringskassans inläsningscentral</p>
+					<p>839 88 Östersund</p>
+				</div>
 			</div>
 		</div>
 	</header>
 
 	<section>
 		<div class="pdf-container clearfix">
-			<div class="right w-50 pb pl">
-				<p>Skicka blanketten till</p>
-				<h3>Försäkringskassans inläsningscentral</h3>
-				<p>839 88 Östersund</p>
-			</div>
-		</div>
-	</section>
-
-
-	<section>
-		<div class="grey-box">
-			<p>FK 3066 (004 F 001) Fastställd av Försäkringskassan0771-17 90 00 www.forsakringskassan.seAnmälan från
-				arbetsgivareUppgifter om en personlig assistentFörsäkringskassans inläsningscentralSkicka blanketten
-				till839 88 Östersund1. Personen som har ansökt om eller har personlig assistans2. Den personliga
-				assistentenÄr assistenten bosatt utanför EES-området?NamnPersonnummer (12 siffror)NejJaNejJa. Fyll i
-				till högerAnställningsdatumAssistentens bostadsadress i landet utanför EES-områdetFyll i här om anmälan
-				gäller ändrade förhållanden Ändringen gäller från och med (datum)NamnPersonnummer (12 siffror)Är
-				assistenten närstående till eller lever i hushållsgemenskap med den som har personlig assistans?1
-				(2)30661103Arbetsgivare för eller uppdragsgivare åt personliga assistenter är skyldiga att lämna
-				uppgifter till Försäkringskassan om assistenterna. Det ska framgå om assistenten är</p>
-			<ul>
-				<li>över 18 år </li>
-				<li>bosatt inom eller utanför EES-området </li>
-				<li>närstående till eller lever i hushållsgemenskap med den som får personlig assistans. Med närstående
-					menas make, sambo, barn, förälder och syskon samt deras makar, sambor och barn. </li>
-			</ul>
-			<p>Uppgifterna ska lämnas redan innan assistansen börjar utföras och vid ändrade förhållanden. Det kan till
-				exempel vara om assistenten och personen som har assistans gifter sig eller flyttar ihop, om de skiljer
-				sig eller flyttar isär, eller om assistenten flyttar till ett land utanför EES-området</p>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>1. Personen som har ansökt om eller har personlig assistans</caption>
+				<caption>1. Du som har personlig assistans</caption>
 				<tbody>
 					<tr>
 						<td width="70%">
-							<span class="data-title">Namn</span>
+							<span class="data-title">Förnamn och efternamn</span>
 							<span class="data-value"></span>
 						</td>
 						<td>
@@ -314,206 +362,413 @@
 	<section>
 		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>2. Den personliga assistenten</caption>
+				<caption>2. Redovisning av all utförd assistans under månaden</caption>
 				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr>
-						<td colspan="7">
-							<span class="data-title">Namn</span>
-							<span class="data-value"></span>
+						<td>
+							<span class="data-title">Aktiv tid</span>
+							<div class="clearfix">
+								<div class="w-50 left">
+									<span class="data-title">timmar</span>
+									<span class="data-value"></span>
+								</div>
+								<div class="w-50 left">									
+									<span class="data-title">minuter</span>
+									<span class="data-value"></span>
+								</div>
+							</div>
 						</td>
-						<td colspan="3">
-							<span class="data-title">Personnummer (12 siffror)</span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="3">
-							<span class="data-title">Anställningsdatum</span>
-							<span class="data-value"></span>
+						<td>
+							<span class="data-title">Väntetid, faktiska timmar</span>
+							<div class="clearfix">
+								<div class="w-50 left">
+									<span class="data-title">timmar</span>
+									<span class="data-value"></span>
+								</div>
+								<div class="w-50 left">									
+									<span class="data-title">minuter</span>
+									<span class="data-value"></span>
+								</div>
+							</div>
 						</td>
-						<td colspan="7">
-							<span class="data-title">Är assistenten närstående till eller lever i hushållsgemenskap med den som har personlig assistans?</span>
-							<span class="uncheck">Nej</span>
-							<span class="check">Ja</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="3">
-							<span class="data-title">Är assistenten bosatt utanför EES-området?</span>
-							<span class="uncheck">Nej</span>
-							<span class="uncheck">Ja. Fyll i till höger</span>
+						<td>
+							<span class="data-title">Beredskapstid, faktiska timmar</span>
+							<div class="clearfix">
+								<div class="w-50 left">
+									<span class="data-title">timmar</span>
+									<span class="data-value"></span>
+								</div>
+								<div class="w-50 left">									
+									<span class="data-title">minuter</span>
+									<span class="data-value"></span>
+								</div>
+							</div>
 						</td>
-						<td colspan="7">
-							<span class="data-title">Assistentens bostadsadress i landet utanför EES-området</span>
-							<span class="data-value"></span>
-						</td>
-					</tr>
-
-					<tr>
-						<td colspan="10">
-							<h4>Fyll i här om anmälan gäller ändrade förhållanden</h4>
-						</td>
-					</tr>
-
-					<tr>
-						<td colspan="10">
-							<span class="data-title">Ändringen gäller från och med (datum)</span>
-						</td>
-					</tr>					
+					</tr>				
 				</tbody>
 			</table>
 		</div>
 	</section>
 
-
-
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>3. Har assistans utförts i barnomsorg, skola eller daglig verksamhet</caption>
+				<tbody>
+					<tr>
+						<td>
+							<span class="check w-15">Ja</span>
+							<span class="uncheck">Nej</span>
+						 </td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</section>
 
 	<section>
 		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>3. FK 3066 (004 F 001) Fastställd av Försäkringskassan3. Anordnaren av personlig assistans</caption>
+				<caption>4. Har du vårdats på sjukhus den här månaden?</caption>
 				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
 					<tr>
-						<td colspan="10">
-							<span class="uncheck">Jag är egen arbetsgivare och har själv anställt assistenten</span>
+						<td colspan="12">
+							<span class="uncheck">Nej</span>
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2" rowspan="5" class="no-brb vtop">
-							<span class="uncheck">Personen anlitar en assistans- anordnare</span>
-						</td>
-						<td colspan="6">
-							<span class="data-title">Namn på anordnaren</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="2">
-							<span class="data-title">Organisationsnummer</span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="6">
-							<span class="data-title">Kontaktperson</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="2">
-							<span class="data-title">Telefon, även riktnummer</span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-
-					<tr>
-						<td colspan="8">
-							<span class="data-title">Är anordnaren arbetsgivare för assistenten?</span>
+						<td colspan="1" rowspan="3" class="no-brb vtop">
 							<span class="uncheck">Ja</span>
 						</td>
+						<td colspan="3">
+							<span class="data-title">Från och med (år, månad, dag)</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="2">
+							<span class="data-title">Klockslag</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-title">Till och med (år, månad, dag)</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-title">Klockslag</span>
+							<span class="data-value"></span>
+						 </td>
 					</tr>
-
-					<tr>
-						<td colspan="3">
-							<span class="uncheck">Nej, anordnaren är  uppdragsgivare åt  assistenten som har en annan arbetsgivare </span>
-						</td>
-						<td colspan="3">
-							<span class="data-title">Namn på arbetsgivaren</span>
+					<tr>						
+						<td colspan="3">							
 							<span class="data-value"></span>
-						</td>
-						<td colspan="2">
-							<span class="data-title">Organisationsnummer</span>
+						 </td>
+						 <td colspan="2">
 							<span class="data-value"></span>
-						</td>
-					</tr>	
-					<tr>
-						<td colspan="8">
-							<span class="uncheck">Nej, anordnaren är uppdragsgivare åt assistenten som är egenföretagare. </span>
-						</td>
-						
-					</tr>	
-
+						 </td>
+						 <td colspan="3">
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+					<tr>						
+						<td colspan="3">							
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="2">
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+					
 				</tbody>
 			</table>
 		</div>
 	</section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 	<section>
 		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>3. FK 3066 (004 F 001) Fastställd av Försäkringskassan3. Anordnaren av personlig assistans</caption>
+				<caption>5. Har du vistats i ett land utanför EES-området och anlitat en assistent på plats?</caption>
 				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td class="w-15">
+							<span class="uncheck">Ja</span>
+						 </td>
+						 <td>
+							 <span class="data-title">Bifoga en förklaring till varför du behövde anlita en assistent på plats. Skicka också in handlingar som styrker dina uppgifter.</span>
+						 </td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</section>
 
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>6. Fyll i här om du har köpt assistans och fått ersättning i efterskott</caption>
+				<tbody>
+					<tr>
+						<td>
+							<span class="data-title">Har du använt föregående månads utbetalning till köp av personlig assistans?</span>
+							<span class="check w-15">Ja</span>
+							<span class="uncheck">Nej, det finns________kronor kvar.</span>
+						 </td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>7. Underskrift</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td colspan="12">
+							<span class="data-title">Jag försäkrar på heder och samvete att uppgifterna i blanketten är riktiga och fullständiga. </span>
+							<span class="data-title">När uppgifterna förändras måste jag meddela Försäkringskassan. Jag vet att det är straffbart att lämna felaktiga uppgifter,  att utelämna något eller att inte meddela Försäkringskassan när uppgifterna jag lämnat förändras.</span>
+						</td>
+					</tr>
 					<tr>
 						<td colspan="3">
-							<span class="data-title">Datum</span>
+							<span class="data-title">Datum (år, månad, dag)</span>
 							<span class="data-value"></span>
 						 </td>
-						<td colspan="5">
-							<span class="data-title">Namnteckning</span>
+						 <td colspan="6">
+							<span class="data-title">Namnteckning </span>
 							<span class="data-value"></span>
 						 </td>
-						 <td colspan="2">
+						 <td colspan="3">
 							<span class="data-title">Telefon, även riktnummer</span>
 							<span class="data-value"></span>
 						 </td>
-					</tr>					
-
+					</tr>
+					
 				</tbody>
 			</table>
-			<p>Läs mer om Försäkringskassans behandling av personuppgifter på forsakringskassan.se.</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>8. Fyll i här om du som skrivit under är ställföreträdare</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td colspan="12">
+							<span class="w-15 left">Jag är </span>
+							<span class="uncheck w-25">vårdnadshavare</span>
+							<span class="uncheck w-25">god man</span>
+							<span class="uncheck">förvaltare </span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="9">
+							<span class="data-title">Namnförtydligande</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="3">
+							<span class="data-title">Personnummer (12 siffror </span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+					
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<h3 class="table-title">Redovisning av kostnader</h3>
+		<div class="grey-box">
+			<p>Du ska redovisa dina kostnader i följande situationer: </p>
+			<p>Om du själv har anställt dina assistenter ska du alltid redovisa dina kostnader för sådana assistenter.  Detsamma gäller om du har beviljats assistansersättning med ett högre timbelopp eller har ansökt om högre timbelopp för tid före beslut och beslut ännu inte har fattats. Du ska även redovisa dina kostnader om du har  eller kan ha rätt till utbetalning med ett skäligt belopp för assistans anlitad utanför EES. </p>
+			<p>Om du får ersättningen i förskott ska du redovisa i slutet av perioden. Om du får ersättningen i efterskott ska  du redovisa varje månad.  </p>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>9. Redovisa dina kostnader</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td colspan="4">
+							<b>Typ av kostnad</b>
+						 </td>
+						 <td colspan="3">
+							<b>Kostnad per timme</b>
+						 </td>
+						 <td colspan="3">
+							<b>Kostnad för perioden</b>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Lön (utom OB-tillägg) och lönebikostnader </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Lön i form av OB-tillägg </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Assistansomkostnader </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Utbildningskostnader </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Arbetsmiljöinsatser och personalomkostnader </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title">Administrationskostnader </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value">kronor</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title"><b>Summa kostnad för assistansen:</b> </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value"><b>kronor</b></span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value"><b>kronor</b></span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="4" class="bottom-left">
+							<span class="data-title"><b>Antal utförda timmar under perioden som kostnaden är beräknad på:</b> </span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							<span class="data-value"><b>kronor</b></span>
+						 </td>
+						 <td colspan="3" class="bottom-right">
+							
+						 </td>
+					</tr>
+					
+				</tbody>
+			</table>
 		</div>
 	</section>
 
 
+	<h3 class="table-title pb-15">10. Fyll i här om du får ersättning i förskott</h3>
 
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption><small>10.a Uppgift om perioden</small></caption>
+				<tbody>
+					<tr>
+						<td width="70%">
+							<span class="data-title">Från och med (månad)</span>
+							<span class="data-value"></span>
+						</td>
+						<td>
+							<span class="data-title">Till och med (månad)</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
 
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>10.b Finns det pengar kvar som du inte har använt för att köpa personlig assistans?</caption>
+				<tbody>
+					<tr>
+						<td>
+							<span class="check w-15">Ja</span>
+							<span class="uncheck">Nej, det finns________kronor kvar.</span>
+						 </td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</section>
 
+	<section>
+		<div class="grey-box">
+			<p>När vi har fått din redovisning kommer vi att göra en slutavräkning. Det innebär att vi jämför den ersättning du har fått med den som du har redovisat. Om du inte har använt all ersättning till din personliga assistans under perioden så ska du betala tillbaka överskottet. Vi behöver veta hur du i så fall vill att det ska gå till. </p>
+		</div>
+	</section>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>10.c Hur vill du betala tillbaka eventuellt för mycket utbetald ersättning?</caption>
+				<tbody>
+					<tr>
+						<td>
+							<div class="check pb-10">Jag vill att Försäkringskassan drar av eventuellt för mycket utbetald ersättning för den här perioden på kommande utbetalningar.</div>
+							<div class="uncheck pb-10">Jag vill att Försäkringskassan prövar om jag är återbetalningsskyldig om det har utbetalats för mycket ersättning för den här perioden. </div>
+						 </td>
+					</tr>				
+				</tbody>
+			</table>
+		</div>
+	</section>
 
 
 </body>

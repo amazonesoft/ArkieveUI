@@ -99,7 +99,7 @@
         margin-bottom: 5px;
     }
 
-    caption {
+    caption,.table-title {
         font-size     : 20px;
         padding-bottom: 5px;
         font-weight   : bold;
@@ -109,7 +109,9 @@
         color: #000;
         caption-side: initial;
     }
-
+    caption small {
+        font-size: 18px;
+    }
 
     /*----------- grey box ---------*/
 
@@ -121,6 +123,9 @@
         font-size       : 18px;
         line-height     : 26px;
         background-color: #f3f3f3;
+    }
+    .table-title + .grey-box {
+        margin-top: 0;
     }
 
     .grey-box ul {
@@ -210,6 +215,48 @@
         padding   : 0;
         width     : 10%;
     }
+
+    /* --- date table --- */
+		.date-table {
+			width: 180px;
+			margin-top:15px;
+			border: 1px solid #cccccc;
+		}
+		.date-table	td{
+			padding: 3px;
+			min-width: 16px;
+			height: 40px;
+			text-align: center;
+			border-right: 1px solid #cccccc;
+		}
+		.date-table	td:last-child{
+			border-right: 0;
+		}
+		.date-data {
+			padding-left: 15px;
+			padding-top: 20px;
+		}
+		.date-section h4 {
+			margin-bottom: 10px;
+		}
+		.bottom-right {
+			vertical-align: bottom;
+			text-align:right;
+		}
+		.bottom-left {
+			vertical-align: bottom;
+			text-align:left;
+		}
+		.bottom-left .data-title {
+			padding-bottom: 0;
+			padding-top: 5px;
+		}
+		.pb-15 {
+			padding-bottom : 15px !important;
+		}
+        .pb-10 {
+			padding-bottom : 10px !important;
+		}
 }
 
     .pdf_title  {

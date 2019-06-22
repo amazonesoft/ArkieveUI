@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>pdf1</title>
+	<meta content="width=device-width, initial-scale=1.0" name="viewport">
+	<meta http-equiv="content-type" content="text-html; charset=utf-8">
+	<style type="text/css">
+		* {
+		    padding   : 0;
+		    margin    : 0;
+		    box-sizing: border-box;
+		}
+
+		html {
+		    font-size: 100%;
+			line-height: 1;
+		}
+
+		body {
+		    padding: 25px 50px;
+		}
+
+		table {
+		    border-spacing: 0;
+		}
+
+		a img {
+		    border: none;
+		}
+
+
+		body a {
+		    text-decoration: none;
+		}
+
+		body a:hover {
+		    color  : inherit;
+		    opacity: 0.7;
+		}
+
+		body .pdf-container {
+		    min-width: 620px;
+		    margin   : 0 auto;
+		}
+
+		body .clearfix:after {
+		    content: "";
+		    display: table;
+		    clear  : both;
+		}
+
+		body .left {
+		    float: left;
+		}
+
+		body .right {
+		    float: right;
+		}
+
+		body .no-break {
+		    page-break-inside: avoid;
+		}
+
+		p {
+		    margin-bottom: 5px;
+		}
+
+		.w-50 {
+		    width: 50%;
+		}
+		.w-15 {
+			width: 15%;
+		}
+		.w-25 {
+			width: 25%;
+		}
+
+		.pl {
+		    padding-left: 15px;
+		}
+
+		.pr {
+		    padding-right: 15px;
+		}
+
+		.pb {
+		    padding-bottom: 15px;
+		}
+
+		.pt {
+		    padding-top: 15px;
+		}
+
+		.br {
+		    border-right: 1px solid #ccc;
+		}
+
+		.vtop {
+		    vertical-align: top;
+		}
+
+		/*----------- header ---------*/
+
+		header {
+		    margin-bottom: 30px;
+		}
+
+		.pdf-logo {
+		    margin-bottom: 10px;
+		}
+
+		header .title {
+		    font-size    : 22px;
+		    font-weight  : bold;
+		    margin-bottom: 5px;
+		}
+
+		h3 {
+		    font-size    : 20px;
+		    margin-bottom: 5px;
+		}
+
+		caption,.table-title {
+		    font-size     : 20px;
+		    padding-bottom: 5px;
+		    font-weight   : bold;
+		    text-align    : left;
+			padding-left: 10px;
+		}
+		caption small {
+			font-size: 18px;
+		}
+
+		/*----------- grey box ---------*/
+
+		.grey-box {
+		    padding         : 25px;
+		    border-radius   : 15px;
+		    margin-top      : 40px;
+		    margin-bottom   : 40px;
+		    font-size       : 18px;
+		    line-height     : 26px;
+		    background-color: #f3f3f3;
+		}
+		.table-title + .grey-box {
+			margin-top: 0;
+		}
+
+		.grey-box ul {
+		    padding: 10px 0 20px 10px;
+		}
+
+		section {
+		    margin-bottom    : 30px;
+		    page-break-inside: avoid;
+		}
+
+		.uncheck {
+		    background-image : url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzEzOCA3OS4xNTk4MjQsIDIwMTYvMDkvMTQtMDE6MDk6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpGMjMyNjI3RjkxRjQxMUU5OUYzOEFDNUNERTBGM0JFRiIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDpGMjMyNjI4MDkxRjQxMUU5OUYzOEFDNUNERTBGM0JFRiI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYyMzI2MjdEOTFGNDExRTk5RjM4QUM1Q0RFMEYzQkVGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYyMzI2MjdFOTFGNDExRTk5RjM4QUM1Q0RFMEYzQkVGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAFwAYAwERAAIRAQMRAf/EAGQAAQEBAAAAAAAAAAAAAAAAAAUGBwEBAAAAAAAAAAAAAAAAAAAAABAAAQQBAwEFCQEAAAAAAAAAAgEDBAURABIGIVG1NlYHMdGT0xR0lHUWFxEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A2ThfBeHW9IdjaU8WbPfn2SvSn20Nw9tg+A7iLquBFE0Dv+X+nfl2B8APdoA+YcH4hTVsKxqqiLBns3FKLUlhtG3BR22itmiEPXBAZCvai6Bz018KB99Z95SNBUaCX9R/Dsb9zRd8xNAJw7kzlXSnBKlsphNTrFfqIbLb7Bb575pscFzC43YXsXKaBv8Aui8uXf4g/M0AvLeSuWtdCgjTWMNTt6c1kzWm47Ao1axnV3OE5jJIGBT2kWBTqqaD/9k=');
+		    background-repeat: no-repeat;
+		    display          : inline-block;
+		    padding-left     : 30px;
+		    line-height      : 23px;
+		    padding-right    : 15px;
+		}
+
+		.check {
+		    background-image : url('data:image/jpeg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMvaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzEzOCA3OS4xNTk4MjQsIDIwMTYvMDkvMTQtMDE6MDk6MDEgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcE1NPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvbW0vIiB4bWxuczpzdFJlZj0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL3NUeXBlL1Jlc291cmNlUmVmIyIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjNBOTUzMjAwOTJBQzExRTlBRkU4RjRGNUQ5QkI1RkNEIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjNBOTUzMUZGOTJBQzExRTlBRkU4RjRGNUQ5QkI1RkNEIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE3IChXaW5kb3dzKSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkYyMzI2MjdGOTFGNDExRTk5RjM4QUM1Q0RFMEYzQkVGIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkYyMzI2MjgwOTFGNDExRTk5RjM4QUM1Q0RFMEYzQkVGIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoKDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgAFwAYAwERAAIRAQMRAf/EAGEAAQEBAAAAAAAAAAAAAAAAAAUGBwEBAAAAAAAAAAAAAAAAAAAAABAAAQQBAwIFBQEAAAAAAAAAAgEDBAUGABESIRMxIhQVB0FR05QWVhEBAAAAAAAAAAAAAAAAAAAAAP/aAAwDAQACEQMRAD8A1rHcWwN3FZeQ5BVRpLgS7R6bOdYV91QanvpyLZCMuID9E0DUnCPiWNUncP1NUFUDPqSnK212ezx5I4hp0UVTw28dAVk2H4ZApa25paiPBle60ZR5LbKsPCD9rFAkVFQTHk24Qkipv166BrBbCDXYM7PnvhGhRZVq7IfcXiAANjIUiJV0EPHp7CDYNZTMgPt/GzcgpcbFiRVcgmqoQWpx0Hl2+XI/S7r2d+4g80URC8+QH2JGLQpEdwXmHrehcadBUIDAriGokJJ0VFRd0XQCYlk3tdG5CdprCYjU6xUpEVlt+OSHPfPyuI5su2+y/Zd00D/90X+cu/1B/JoAspyT3WsgwmqawhidtTGMiW02xHEWrSK71cVzbzIGwInUi2FOqpoP/9k=');
+		    background-repeat: no-repeat;
+		    display          : inline-block;
+		    padding-left     : 30px;
+		    line-height      : 23px;
+		    padding-right    : 15px;
+		}
+
+		.no-brb {
+		    border-bottom: 0 !important;
+		}
+
+
+		/*-------------------- table --------------- */
+
+
+		section .pdf-table-title {
+		    font-size  : 18px;
+		    font-weight: bold;
+		}
+
+		section .pdf-table {
+		    width         : 100%;
+		    border-spacing: 0;
+		    border        : 1px solid #ccc;
+		}
+
+		.data-title {
+		    display       : block;
+		    padding-bottom: 5px;
+		}
+
+		.data-value {
+		    display   : block;
+		    min-height: 16px;
+		}
+
+		section .pdf-table tr td {
+		    border-bottom: 1px solid #ccc;
+		}
+
+		section .pdf-table tr:last-child td {
+		    border-bottom: 0;
+		}
+
+		section .pdf-table tr td {
+		    padding     : 10px;
+		    border-right: 1px solid #ccc;
+		}
+
+		section .pdf-table tr td:last-child {
+		    border-right: 0;
+		}
+
+		section .pdf-table .for-grid {
+		    visibility: hidden;
+		    height    : 1px;
+		    border    : 0;
+		    overflow  : hidden;
+		}
+
+		section .pdf-table .for-grid td {
+		    visibility: hidden;
+		    height    : 0;
+		    border    : 0;
+		    padding   : 0;
+		    width     : 10%;
+		}
+
+		@media print {
+		    * {
+		        -webkit-print-color-adjust: exact !important;
+		        /*Chrome, Safari */
+		        color-adjust: exact !important;
+		        /*Firefox*/
+		    }
+		}
+		/* --- date table --- */
+		.date-table {
+			width: 180px;
+			margin-top:15px;
+			border: 1px solid #cccccc;
+		}
+		.date-table	td{
+			padding: 3px;
+			min-width: 16px;
+			height: 40px;
+			text-align: center;
+			border-right: 1px solid #cccccc;
+		}
+		.date-table	td:last-child{
+			border-right: 0;
+		}
+		.date-data {
+			padding-left: 15px;
+			padding-top: 20px;
+		}
+		.date-section h4 {
+			margin-bottom: 10px;
+		}
+		.bottom-right {
+			vertical-align: bottom;
+			text-align:right;
+		}
+		.bottom-left {
+			vertical-align: bottom;
+			text-align:left;
+		}
+		.bottom-left .data-title {
+			padding-bottom: 0;
+			padding-top: 5px;
+		}
+		.pb-15 {
+			padding-bottom : 15px !important;
+		}
+		.pb-10 {
+			padding-bottom : 10px !important;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div class="pdf-container clearfix">
+			<div class="left w-50">
+				<figure>
+					<img class="pdf-logo"
+						src=" data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAATkAAAAtCAYAAADV0RzIAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAABosSURBVHhe7d2Hsy1FEQdg/wuLKkVAogRJkkUQDKgkyTkISAYRAQUDUYJKpshKjopkJCtIlBxFQYIKKpKDxLW+repTfebtCTfz7tup2rrv7e7s9PR0/6bT7vlY1baWAy0HWg5MYw58bBrPrZ1ay4GWAy0HqhbkWiFoOdByYFpzoAW5ab287eRaDrQc6AK5W265pVp22WWrueeeu5pnnnmm5JhvvvmqHXbYoXr55Zfb1Wk50HKg5cCYOdAFcuedd1612GKL1eAGbCb7mHfeeSvHmmuuWT399NNjnlz7gJYDLQdaDnSB3Pe///0a4JZZZplqt912m/Tji1/8Ysd6vO2229rVaTnQcqDlwJg50AhyW265ZfXKK6/ULuNIjtH08fz//ve/1Z133lmtv/76HZDjOret5UDLgZYDY+VAI8ix4iarvf/++9Xtt99e7bzzzrWrypL0twW5yVqBdpyWA9ObA1MOco899lj1zW9+s5prrrm6Eh0tyE1vwWtn13JgsjgwZSD3wQcfVE899VT13e9+t/r0pz/dBXCtJTdZy9+O03Jg+nNgSkAOwN1///3VnnvuWWdwm8pVWktu+gtfO8OWA5PBgSkBuSeffLLaaKONZrDgAuxaS24ylr4do+XArMGBSQU5Ftzf//73at999+0JcG3iYdYQvHaWLQcmiwOTBnIA7vHHH69++MMfVvPPP//Atylad3WyRKAdp+XA9ObAqEHuww8/rOvbXnzxxaGOP//5z9UWW2wxQxa1KR7XuqvTW+ja2bUcmEwOjBrkXn/99eroo4+ufvaznw08jjjiiBrgyixqr/djxwPkFBn/+9//HvEBuAG4xvoE4vk57733XqW2rzzv3FQ19L700ktddL711lv1PDIf/vWvf1XvvPNOF5lvvPFGV79XX311QqehYDzzE53TpZUyV/J6usxzZptHI8jtvvvuA+cheQCk1LctsMAC1cILL9z3+MxnPjPQRR3PxMMvf/nL6sADDxzxcfzxx3eA4M0336x+/vOfdz3j+eefr4EDuOfnA72pau+++2510kkndejZf//9q7vvvrty/vTTT68OOOCA+tqPf/zj6i9/+UsXmTfeeGPnunt+/etfd0B+IuZz9tlnd+hEl0Lw6dLOOuusLpngvbRt6jkwaktOjZvYmi+WbLvtthXF6nd861vfqhZaaKGhgW6sMbn11ltv6LECXM3ly1/+csW60YDZ0ksv3XmO64888kj13HPPVUsuuWTX84H+VLX//e9/1Te+8Y0OPXPOOWcFTJxfd911O1+V+eQnP1nddNNNXWQC8fzVmV133XVCQY5FH/xm2QPh6dI23XTTLlm5/vrrp8vUZup5jAnkWHAsubvuumsgE7hBu+yyS7XgggsOBJ/xcFfHA+S4gEsttVQNAg5KGSC3xBJLdM67NtUg9/Wvf71DzxxzzNEBuXXWWaemG42f+MQnZgC5X/ziF5MKcptvvnmHTrJz2mmnDZSdmeWGFuQ+mivVBXI/+MEPagAa5t3VsOQI6h133DHU7MRjvKM6jEU33pYcq9NnpPodiy66aLXWWmtV3FQNvV/5yldqoItDhvgf//hHteqqq3adn8pPQ7HYNt544+pzn/tcTRMAvuiii2q3e6uttuqc/+xnP1vdeuutM1hyOTY60Zac9Q9esobPOeecoWRnZripBbmP5iqNyZIDHCMBOSzgCu611151HG8iEw+lJbfyyivXcbTDDz+853HYYYdVJ598cicmJ8ngzYw//elP9SHO9dprr1WC5ffee2/9/zg/0gC6pIajV4vr/e6Jvu5hYQY9LOt//vOfFfoffvjh+rzD+fJjpJNhyaEvkjk2icxPMc5hmv6DeNb0nOgT4w8zVr4njztoLTLIke3xcFfz+KOZw0jkqOTNWPp61lj7Z/nOMjTSNRwTyIW76jNJI2kys2J0verlxsNdzZ9tInAsmtE0gsVSYtVRSMFkh6Jm5wT3mxprEKDHEff5C2i4t6zhnJUFSkBUFlSCACD4+8ILL9TnB2VwPVtYwP1PPPFEh1Z0o7Up21eCXJMVr1+ei3+//fbb9bTRbD3jeljBhNI5czEPrr+mXxNf8LkcI5TE84P3+CE7a5x+So8uc8Zj6/W3v/2t/r/zQVser3yW+/DSuMHLv/71r/V80NO0FsNYcuX80VDKEFrMT6b/mWeeqfnnMAcJLtf6yYL1MtcsB2gPvo20b/AcrYNkkK6Qb3wKXcky3KQvJU88Q/OX3KDd/MXCrcmgzabUxzGBXFhyIwU5RFhAwNOUdZ0IkPONvJE2C0owfvvb31Y77rhj9aUvfanjaq200kq1W8+ttqh58f2bRchyVD7DemS9EE6B/29/+9vVcsstV7vClIhQA7F77rmn2m+//erkhw+Xcj/9Na4i6vvuu69WsFIhCQ5+ouU73/lOfb+ESbiFq6yySk3/DTfcUCtJpnWQJefZ+plHHMccc0x11VVX1exkKbKA49qpp55aKy333X2rrbZanaRRbqRdcMEFnXvxJWQnMtnxnKOOOqoOC1Dygw8+uOaJ+eCHZ55wwgnVf/7znxmUDm/wCL/Nefnll6/7rbDCCnVMWGgFz/N8jj322A7QUCAA4T4eB94FL/00wFe/+tXqoIMOqh599NEalPNa9AO5AK48f/JhHhRYi3soM/nxdZ4VV1yxE24wB+dUADz44IO1R5GbdQUC1157bf0TAlkO0L722mtX5srqj00q+pt39N1pp51qfse88Xz11VevrMlDDz3UKIOAlR5cfvnldSIy64r++Ea2ZfPxN/NNaCXWg0xcffXV9T2/+c1vKjFctNOFL3zhC7V841cA4TA6PS4gN2xMriQIUzE0viM3niUkpbs6UpCzk1MUgXvZyshARhICrQL6aN9ggw1q9zUWzoJTDv3ikEUk1O6PekHKR6DtuIQS4Mcnp9zn4wXBG+clbfbYY49auaMR7GuuuaYW4Pzs+HR99I/kgywsYIrWD+TMA8ChM+bBelf6ETTYAGafffbOdbHK3//+97VgSoAEn/TRAIG5eJ7rQFEDvlGS5DpeXHzxxbWyuLcMbbhnww03rHyqKzfPoQj657rMSBzZmCkUvniu5wDhsECBKhrxL/qXvNRHfNPGk93/XiAXhfPG9awYF1/FJMPCRjsltwFmmYvx8cA88I0sALvYsIwBgHhI5hbymml3znPFnskjGQ9wZa1us802nfXKP4EQMqSvcb/3ve/Vm2qWQcBEV4LGpv74hqfisjb1aHTTnFz/1Kc+Vcu4j3dkHuSM/OKLL14n1oYNX0wpyJkkoCOsuYxhPCy5JpCze/U78qL/4Q9/qJMUma4AnQCgrHgsO1afxpKxE8Z1/VitEYeMZ1IuIAf88vf03G/X8lsXLJH8pRZ93R+NS1BawxQZOEii2EXLTYSFk0Eu3hf2NxIPlOfcc8/tip16ToBV9L/00ku7QAgfYu4ZoKNfWUIS2VVKk+O05mxeGezLL9bgxSabbNKl6GoBMy/jd0Pyc8owCYsliqcl3/KaowFwWwvgk2mghKecckqHl71icixL1k0GXck3wBCN7IViZ7mi0GussUZtvQKnfA3gACcNSFvvfB0/eQv6l3Kkr41ZM3elRplv+lpH82ZB5nm7j5UejWWYZTDWjvXGArThZRnUXx1rNMCcea7m1v+tU5OuhbyGO9y1yzX8Z8pBDk0smdgFYpHGK7sazCWgdniFzk0H5Y4aMsBrgTLjLbqdjivAuvF7GBYj19hRMMJaglzsbmiJ2sJFFlmktiDE9kpAJkB4wiR33Y5NKGNX5rIEILuW6fTcSy65pN5p9ec27rPPPl33+C2N6N9kyQE4v7GRBRfdFKF8I6IEuRDKDCSe0wvkok4uQK4E5M9//vPVoYceWpeasHZLgDJfSRbNM4B6VnTrjp+sS2NR3HKMADnrBhSivzUH9J5rc3z22Wern/70p10/8LTZZpt1QLYJ5PCZtVoCHLcxhw1YkOVmZUNgqQIhfJc4Yv0Ffawfxdsahc+8QTsrkdunv810++2379COB9xHFqCYV+7rGvBmpZIhYQOufv5hK55DyBA3NvMcjQAczcY2t6zf5JUMR9t6661n+IVA8s7i47bjuYqB0pqPt60mDOQEEzEDKv/xj38cNM7A6wKMduVA6fECucwYgtbryLuLuELe1ey6YlBl0PX888/vUhj3ias1gRw6KBNFE88BYhbfvFltQWfssMYK99e/Lbgd2aFcJOIaAJvr5KDwrIGyCVjn+kRAoL9WFgN73gMPPFC721nZKUT0yc8vQS7Wz4ZiDc0RCIWVmy05wl6CXGnFhKViTHxVcJ7dV+spA66xDvI18SzKnRs3CVjncaxLBPozSFIscp7Xwn2s8lgLIBfA3+SucqvyZuiZXPxSlvAKMMVaoqOpLEl4J2gno+Hu8zyytWUDRXvOSnJnWVZBO+sSCBk7yzsPRkgj97UOLEWWnf7mGq662HSWwabaR3zIQM/i72XJWcMzzzyza93Eo0tLFg2OQW3UlpwdLnxm1sBo0tslcaEwE+GulrtA+X8K96tf/aomCVDkGMBPfvKTxowOgc87P7rFK3pZciyssnlGdm3RQcAFpAlWCFoTf50DliyMOCKL6VqUH9hVs/WSQa605FiwgrzZOpRY6NWaQI7F0EsexF8ybzPIlVYaC7Rs8TphtqAFszXfKMyxUzGwpibQXYIcZcc7rlV+NrAnFzaKfmthnAxyAKfM8NtommRAX3JgQ4h1ZMHn8SIpwQLKIBeAwtAo3XlAIq5pk+lHu755vf2bBSxJIkkzaN6lDEZ8M8sgSz6PoaSrF8jZrHPML9+XQyvCCI5BbVTFwMzbbD4ys8fjJwRZULETj7clZ6eabbbZeh4f//jHaxPdwsjohCChp5dgYm7eWfURX+TaZOByngnftHCeIdtagq5xLXZkpa677roZsmlNi8tS4eJwz7xLKd5RukH9QC4nVoImv8c7LMih2zr2asPG5IDyGWecMcNjWITiSyXIyXRS6gwAFLypsQoyIIS7SpkBZV6LCPSzIlgwlJXV1FSOU1pyWak9k6VWJkp68YkryJJjpV5xxRW1y16GUPA6QA7QlC6d8cm98yywI488so7DlbQD9/I1RfR6vvPigTYMCcYyK1vST38kUHgrwjreqeaOlgDcD+QYDk3ZU25rXptRgVz87mqvNx4IAVO73OkNbJfiPw+qo+mHugFyE2HJcfG4Lv0OAWJWWA7gAogI0DbRfuKJJ3YxnkBw60rrTDypF29YbFyoyICWgBdmPmUUO8yvkBEqG4xMH7oJpbUIAc9/47n9QK7J4uVO9/oAQZMlZxMcDciVcSEgXTZZXXG6EuS4TtzTDHI2hqZWxr/CXXUvV90aineVIOXZkVEHtHvvvXcdM41WxuSavAVWbsSyStrMgZtGVszRJhe1qLH5ZJcvg5xnsWiBGWDrRTseSySIo0UJChliVADxpkx2njcLj7ei/jCa/qzBH/3oRzUQS5ZEdjtkuvwCUT93VYy6qRYOzXleEwJyQKiJeXkxc9ZkkBlZXvd8wjURIMdNCvO511/0ADmCEnMCGBHzaZoPYM+uIAUhrBnkLLCaq14NPXZI8TwbDKWLsoxSUeyI3lONnc4uX5Y44KH+wIzLpCwhxzNKkOsFqnHe/CRdmlzQEuQIeC5xKec8KCYXvPR3LCCH5+qsmloZpA9Lzr3myCr0+tt2221XW0He+W1SfjQqHwrLqAnkAE62Yvz7wgsvnIEsm0jOSkcZiI8qiPXKlovL5kqEEuTCpaVH4tuMEf0zwGT+ir/mEhSgd+WVV9YxXzzRt8xUkwlzAIghgzwdYJxLnpSCGBdYe57NOWNHP5Bzf1MrExzjDnJ2vxyvaNrxnRO07AcKgyy58QK5Mh4ybJ2cRc99LdTvfve7nmSLG2VeiJlQEkIZ5weBXDzc7kVwxFC4VNwLoNmkYFwm95fzBDLHHXdcXfApnkJwZccoawh4v8QDWoG8Atw8LwLcBBpNINfvs1O9vkLClR+NJYdeFox1Y0VkCy+XOeQFVFeY55ZBLq+FjYelpl4SP1i0lDf3ZbHYnLQS5Ci12Gok1KKf55QJkTIwr6+khoQXt5VLCUz9ul2ARQlyQTteWHdydPPNN9eVANzDUo5YiuQst9yXjEVxetkXDVEfK9OaecJStPkr2hVewEfAPmziYUpATjA0B9h7AVycZ9Iy+0faJtJdHRbk0FxmsAhqkxXD7ShBRt8y8dAP5LjIgtpxsIIiYUCoCbeyFeCV+Q7I3JvPG0ccS7+cGbN+vbKrZeIBqAJFikUJ8pg2ufLd1yaQ6xV7xNvxADlKlMEsSn8UkWZFElttcnu49k0gh9fcsFiL+ICqZ+Aphb3sssu6+GI8AfoS5JwXR6PgNoc8ns1G9jm7rVzffA/gkLV1T3gexmDpx30Z5LxGFXSbQ7wZA7RsnGiXSS91VwmKa7mvcY0ZffFByUu2xFh4ZM1GmmOBZEbckQ5kGVSJ8JEFOWClrqqsLRoEdBRipMmDiXZXhwVd2bRsplMq6feycWkyeLB2zGEkIIe/4jusKwcXIgOqf0ehaOZ5vA6Uv+jCZfC6T9lYA/oOY8lxiaKSXOghu1r6C/7mNlGWHHqHcVfDkkMTsMtyysriqlM6iitWiG9lKULE5MQ241U6a1EWPlsLayuQnq10ClyCHECwOWmSQcpO8vopK4nr+J2v66souWzAipvYBHKSZiFD5gOASjkChGWCAQArQ9EnXiXMBc5oiCw+PQigox/0RLw660AOpWT61ZB+JN1VO/poAC4UikUnyzJsC5DTf6QAWY4xlte6uCiEIS8KF0O5QyQuKHeuJUMzK0X6fCQgR/AIWFTmRzFv3uVZVdYhWy++qIuWbG2htxRQLkcOyHtGP3c1f2qJFcLiyHwAEDkcMdUgh7YoIQEC5brbBGS2uWv4HNX0TZacdTe/WAsWSryjG/JlE8kFuVzs8Fr6vdbFuspZYeOz1uL912yhuaaeLdclAspDDjlkhjcuIrsqNht06w+s6VMGOlZbnjfe2LyVGEVCJfqWtXzuyeEEViQ3Xi2eGrl4LsBzPjcuc+mJ5JhcWQw8Ke4qa4I/H+9DDrLael3HdMHUeAF5ENiNp7s62pgcGpnphKcM2FIAyuKgANnKsdAh7CMBOWOpJs9AAmBViCt8dQ3A5bEICKHnQuWyCeugr5IUnzKXyQsAzWsE5MLtHPRlYMopzpr7C7ZHKUEJcvgyTEwuAuu9XusaNvGQLTlrJ95WZvKyFYvPrKFQWONETM7GkuNnrgE0ZSXWQiJCID1bi+KAXMPSkjNm/tQSa411ldeZ5R1lMuU6uIZOFp2f8Pza177WVVTs+awpbiQgo68ZfNEI6JQQiSeSifIr19x5mzJ3lUwEbfqSI+BDjshgGY8nd/Flm5ztRheLj0eAZ4C/6dVCG29s5OVrXf1Abtyyq4AJg8valtGAnWfIggisWnRp/Tjy//1b0W3sKFNpyRFYgqtolDVagl0WcoJGAGSYYtFGAnLGsglY2DwOJWR12BljPNcJLusidmguZRlK4Kax8PTVx0v5uZLfc6MMZRDIAeEyCUEBlQuY71gtuQxyZTHwMO5qtuTwEvhKFAEk4Jw/kkCxlD+wbnPtYE482KiiDCPkPX7DJK+FdafMasFiLQZ9aonLXNbhse7IvvWQrMphEvxgbVmvyKDTy1B0fxkk8fkoOmNzz3KE9pCFLEdKlrjvEXsTeomvSMe8sxxFX/TRCZZjzNsaZhn0b7xCt/HRk+mOzThex5tUSy4Csggb5rdRhwU9C2RnyF/YJVj5cC3MXkyKjNUg66/XdUoIOOJg6o+0yVDFb8Wy3iyw7K8Mm7/cVTEeApo/e0PouHkxNsF2X68GSARwKac+eK8EJMaiqMaSbVVTlwsygTELmHDrh7Y4WBlcbG6YDSToUYYQn6wXNM98kqYvkyyEUaYv32f3VYpBOVh2cc35pte/Yu4AM/OFsmgAAEjENRZVU1abBSq5k59R1jFyW1mTXCmKb1M138hSUu78MQBymL+PJ0yjkBhPAUnmKRlgVamP9JxctMrqyTwq3TZ8VaSN/3meMvSSHoL/3i4BfCFj/tILVrlaNJZq5rdkS7xWxrK3VkCHu0uPMu3+z51Hu1BHrtuMvuJs4mp0NveNshEJL3wtZVDpiWdnfhkPD71DS27pQV634I8ETb7GAmxqMrT6kw1/6ZhjUOt648GgwIZyTdVBiMQnwgUYNIFe12UeLXgco/01LW6G7BK3zS4vWEz5fGnXOW5jCQr+L9YWY1OaeN2q33ziZWhxTMpgLIcYmLF6fTAwSh28bxj0hVJHls38Mz3x6o1nZj41ZUbxIN/j3+aE3ihRievAul9BeElHrLM+5Rjxg0KZZ+5T3Z/nEgrnPNCVQHDgB6sanZGl9Cz3ZMtDvDVnYa2fedkclOKw1vJaAEvrXmZuS5lrejsg1irPNXhmXBsE8ATOxhRvlDgxN3Mp+e18yW88lVGPtw6APJkVfzOnJpkNHutrfuZt7PC69PXMpnmHBQ04YUjwir4YLz62SWaaZJBM5Gu96ixLWaVjjkGtC+Sgud3ZjoHJU3FgUnxIchDxk3k9p9RLpRlPOnL5iHEc+QXxXmNFv+iTlXo86fsoP8sHOAGWQ8yI+0UxcwMyrJ/shbAMm9po12IQj5o2xdwnsrjWMsqBBj2zvN5E+7CfEB9t36gEGIncjnReo7m/C+Q8IBhs15iKYyyvhY2GAW2f6cMB1nJOxHBJuW1cQK4ON86bG1FCwprjhpUZ1OnDkXYmODADyLVsaTkws3LABu37ejnwHvFgSQLJl1zTJX4kczjW0MjMyq9Zhe4W5GaVlZ5F5imeIwEgK9nrPWvnJcIkQUp3dhZh0yw1zRbkZqnlnv6TFXeSUVY20Q/kWHUyiSP95afpz8HpN8P/AySTqel1Iq+RAAAAAElFTkSuQmCC"
+						alt="Fastställd av Försäkringskassan">
+				</figure>
+				<div class="company-address">
+					<p>0771-17 90 00</p>
+					<p><a href="www.forsakringskassan.se">www.forsakringskassan.se</a></p>
+				</div>
+			</div>
+
+			<div class="left w-50">
+				<h2 class="title">Anmälan från arbetsgivare</h2>
+				<p>Uppgifter om en personlig assistent</p>
+			</div>
+		</div>
+	</header>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<div class="right w-50 pb pl">
+				<p>Skicka blanketten till</p>
+				<h3>Försäkringskassans inläsningscentral</h3>
+				<p>839 88 Östersund</p>
+			</div>
+		</div>
+	</section>
+
+
+	<section>
+		<div class="grey-box">
+			<p>FK 3066 (004 F 001) Fastställd av Försäkringskassan0771-17 90 00 www.forsakringskassan.seAnmälan från
+				arbetsgivareUppgifter om en personlig assistentFörsäkringskassans inläsningscentralSkicka blanketten
+				till839 88 Östersund1. Personen som har ansökt om eller har personlig assistans2. Den personliga
+				assistentenÄr assistenten bosatt utanför EES-området?NamnPersonnummer (12 siffror)NejJaNejJa. Fyll i
+				till högerAnställningsdatumAssistentens bostadsadress i landet utanför EES-områdetFyll i här om anmälan
+				gäller ändrade förhållanden Ändringen gäller från och med (datum)NamnPersonnummer (12 siffror)Är
+				assistenten närstående till eller lever i hushållsgemenskap med den som har personlig assistans?1
+				(2)30661103Arbetsgivare för eller uppdragsgivare åt personliga assistenter är skyldiga att lämna
+				uppgifter till Försäkringskassan om assistenterna. Det ska framgå om assistenten är</p>
+			<ul>
+				<li>över 18 år </li>
+				<li>bosatt inom eller utanför EES-området </li>
+				<li>närstående till eller lever i hushållsgemenskap med den som får personlig assistans. Med närstående
+					menas make, sambo, barn, förälder och syskon samt deras makar, sambor och barn. </li>
+			</ul>
+			<p>Uppgifterna ska lämnas redan innan assistansen börjar utföras och vid ändrade förhållanden. Det kan till
+				exempel vara om assistenten och personen som har assistans gifter sig eller flyttar ihop, om de skiljer
+				sig eller flyttar isär, eller om assistenten flyttar till ett land utanför EES-området</p>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>1. Personen som har ansökt om eller har personlig assistans</caption>
+				<tbody>
+					<tr>
+						<td width="70%">
+							<span class="data-title">Namn</span>
+							<span class="data-value"></span>
+						</td>
+						<td>
+							<span class="data-title">Personnummer (12 siffror)</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>2. Den personliga assistenten</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td colspan="7">
+							<span class="data-title">Namn</span>
+							<span class="data-value"></span>
+						</td>
+						<td colspan="3">
+							<span class="data-title">Personnummer (12 siffror)</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<span class="data-title">Anställningsdatum</span>
+							<span class="data-value"></span>
+						</td>
+						<td colspan="7">
+							<span class="data-title">Är assistenten närstående till eller lever i hushållsgemenskap med den som har personlig assistans?</span>
+							<span class="uncheck">Nej</span>
+							<span class="check">Ja</span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="3">
+							<span class="data-title">Är assistenten bosatt utanför EES-området?</span>
+							<span class="uncheck">Nej</span>
+							<span class="uncheck">Ja. Fyll i till höger</span>
+						</td>
+						<td colspan="7">
+							<span class="data-title">Assistentens bostadsadress i landet utanför EES-området</span>
+							<span class="data-value"></span>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="10">
+							<h4>Fyll i här om anmälan gäller ändrade förhållanden</h4>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="10">
+							<span class="data-title">Ändringen gäller från och med (datum)</span>
+						</td>
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>3. FK 3066 (004 F 001) Fastställd av Försäkringskassan3. Anordnaren av personlig assistans</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					<tr>
+						<td colspan="10">
+							<span class="uncheck">Jag är egen arbetsgivare och har själv anställt assistenten</span>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2" rowspan="5" class="no-brb vtop">
+							<span class="uncheck">Personen anlitar en assistans- anordnare</span>
+						</td>
+						<td colspan="6">
+							<span class="data-title">Namn på anordnaren</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="2">
+							<span class="data-title">Organisationsnummer</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+					<tr>
+						<td colspan="6">
+							<span class="data-title">Kontaktperson</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="2">
+							<span class="data-title">Telefon, även riktnummer</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>
+
+					<tr>
+						<td colspan="8">
+							<span class="data-title">Är anordnaren arbetsgivare för assistenten?</span>
+							<span class="uncheck">Ja</span>
+						</td>
+					</tr>
+
+					<tr>
+						<td colspan="3">
+							<span class="uncheck">Nej, anordnaren är  uppdragsgivare åt  assistenten som har en annan arbetsgivare </span>
+						</td>
+						<td colspan="3">
+							<span class="data-title">Namn på arbetsgivaren</span>
+							<span class="data-value"></span>
+						</td>
+						<td colspan="2">
+							<span class="data-title">Organisationsnummer</span>
+							<span class="data-value"></span>
+						</td>
+					</tr>	
+					<tr>
+						<td colspan="8">
+							<span class="uncheck">Nej, anordnaren är uppdragsgivare åt assistenten som är egenföretagare. </span>
+						</td>
+						
+					</tr>	
+
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>4. Underskrift av anordnaren eller egen arbetsgivare</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+
+					<tr>
+						<td colspan="3">
+							<span class="data-title">Datum</span>
+							<span class="data-value"></span>
+						 </td>
+						<td colspan="5">
+							<span class="data-title">Namnteckning</span>
+							<span class="data-value"></span>
+						 </td>
+						 <td colspan="2">
+							<span class="data-title">Telefon, även riktnummer</span>
+							<span class="data-value"></span>
+						 </td>
+					</tr>					
+
+				</tbody>
+			</table>
+			<p>Läs mer om Försäkringskassans behandling av personuppgifter på forsakringskassan.se.</p>
+		</div>
+	</section>
+
+
+</body>
+
+</html>
