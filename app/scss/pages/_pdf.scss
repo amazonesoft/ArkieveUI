@@ -3,7 +3,7 @@
 
 .pdf-wrapper {
     padding: 15px;
-    color: #000;
+	color: #495b73;
     overflow: auto;
     max-width: 100%;
     background-color: #fff;
@@ -184,22 +184,26 @@
         min-height: 16px;
     }
 
-    section .pdf-table tr td {
-        border-bottom: 1px solid #ccc;
-    }
+   		section .pdf-table tr td,
+		section .pdf-table tr th {
+		    border-bottom: 1px solid #ccc;
+		}
 
-    section .pdf-table tr:last-child td {
-        border-bottom: 0;
-    }
+		section .pdf-table tr:last-child td,
+		section .pdf-table tr:last-child th {
+		    border-bottom: 0;
+		}
 
-    section .pdf-table tr td {
-        padding     : 10px;
-        border-right: 1px solid #ccc;
-    }
+		section .pdf-table tr td ,
+		section .pdf-table tr th {
+		    padding     : 10px;
+		    border-right: 1px solid #ccc;
+		}
 
-    section .pdf-table tr td:last-child {
-        border-right: 0;
-    }
+		section .pdf-table tr td:last-child,
+		section .pdf-table tr th:last-child  {
+		    border-right: 0;
+		}
 
     section .pdf-table .for-grid {
         visibility: hidden;
@@ -256,6 +260,21 @@
 		}
         .pb-10 {
 			padding-bottom : 10px !important;
+		}
+        /*--------- time-table -------------- */
+		section .time-table {
+			border-color: transparent !important;
+		}
+		section .time-table tr:nth-child(odd) {
+			background-color: #f2f6ff;
+		}
+
+		section .time-table tr td ,
+		section .time-table tr th {
+			text-align: center;
+			border-color: #dfe9ff;
+			padding-top: 13px;
+			padding-bottom: 13px;
 		}
 }
 

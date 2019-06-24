@@ -2,7 +2,7 @@
 <html>
 
 <head>
-	<title>pdf2</title>
+	<title>pdf3</title>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport">
 	<meta http-equiv="content-type" content="text-html; charset=utf-8">
 	<style type="text/css">
@@ -204,20 +204,24 @@
 		    min-height: 16px;
 		}
 
-		section .pdf-table tr td {
+		section .pdf-table tr td,
+		section .pdf-table tr th {
 		    border-bottom: 1px solid #ccc;
 		}
 
-		section .pdf-table tr:last-child td {
+		section .pdf-table tr:last-child td,
+		section .pdf-table tr:last-child th {
 		    border-bottom: 0;
 		}
 
-		section .pdf-table tr td {
+		section .pdf-table tr td ,
+		section .pdf-table tr th {
 		    padding     : 10px;
 		    border-right: 1px solid #ccc;
 		}
 
-		section .pdf-table tr td:last-child {
+		section .pdf-table tr td:last-child,
+		section .pdf-table tr th:last-child  {
 		    border-right: 0;
 		}
 
@@ -285,6 +289,21 @@
 		.pb-10 {
 			padding-bottom : 10px !important;
 		}
+		/*--------- time-table -------------- */
+		section .time-table {
+			border-color: transparent !important;
+		}
+		section .time-table tr:nth-child(odd) {
+			background-color: #f2f6ff;
+		}
+
+		section .time-table tr td ,
+		section .time-table tr th {
+			text-align: center;
+			border-color: #dfe9ff;
+			padding-top: 13px;
+			padding-bottom: 13px;
+		}
 	</style>
 </head>
 
@@ -339,11 +358,12 @@
 			</div>
 		</div>
 	</header>
-
+	
+	<h3 class="table-title pb-15">Sidan 1: För dig som är assistent</h3>
 	<section>
 		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>1. Du som har personlig assistans</caption>
+				<caption>1. Personen som har personlig assistans</caption>
 				<tbody>
 					<tr>
 						<td width="70%">
@@ -360,416 +380,141 @@
 		</div>
 	</section>
 
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>2. Redovisning av all utförd assistans under månaden</caption>
-				<tbody>
-					<tr>
-						<td>
-							<span class="data-title">Aktiv tid</span>
-							<div class="clearfix">
-								<div class="w-50 left">
-									<span class="data-title">timmar</span>
-									<span class="data-value"></span>
-								</div>
-								<div class="w-50 left">									
-									<span class="data-title">minuter</span>
-									<span class="data-value"></span>
-								</div>
-							</div>
-						</td>
-						<td>
-							<span class="data-title">Väntetid, faktiska timmar</span>
-							<div class="clearfix">
-								<div class="w-50 left">
-									<span class="data-title">timmar</span>
-									<span class="data-value"></span>
-								</div>
-								<div class="w-50 left">									
-									<span class="data-title">minuter</span>
-									<span class="data-value"></span>
-								</div>
-							</div>
-						</td>
-						<td>
-							<span class="data-title">Beredskapstid, faktiska timmar</span>
-							<div class="clearfix">
-								<div class="w-50 left">
-									<span class="data-title">timmar</span>
-									<span class="data-value"></span>
-								</div>
-								<div class="w-50 left">									
-									<span class="data-title">minuter</span>
-									<span class="data-value"></span>
-								</div>
-							</div>
-						</td>
-					</tr>				
-				</tbody>
-			</table>
-		</div>
-	</section>
 
 	<section>
 		<div class="pdf-container clearfix">
 			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>3. Har assistans utförts i barnomsorg, skola eller daglig verksamhet</caption>
-				<tbody>
-					<tr>
-						<td>
-							<span class="check w-15">Ja</span>
-							<span class="uncheck">Nej</span>
-						 </td>
-					</tr>				
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>4. Har du vårdats på sjukhus den här månaden?</caption>
-				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr>
-						<td colspan="12">
-							<span class="uncheck">Nej</span>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="1" rowspan="3" class="no-brb vtop">
-							<span class="uncheck">Ja</span>
-						</td>
-						<td colspan="3">
-							<span class="data-title">Från och med (år, månad, dag)</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="2">
-							<span class="data-title">Klockslag</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-title">Till och med (år, månad, dag)</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-title">Klockslag</span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					<tr>						
-						<td colspan="3">							
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="2">
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					<tr>						
-						<td colspan="3">							
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="2">
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>5. Har du vistats i ett land utanför EES-området och anlitat en assistent på plats?</caption>
-				<tbody>
-					<tr>
-						<td class="w-15">
-							<span class="uncheck">Ja</span>
-						 </td>
-						 <td>
-							 <span class="data-title">Bifoga en förklaring till varför du behövde anlita en assistent på plats. Skicka också in handlingar som styrker dina uppgifter.</span>
-						 </td>
-					</tr>				
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>6. Fyll i här om du har köpt assistans och fått ersättning i efterskott</caption>
-				<tbody>
-					<tr>
-						<td>
-							<span class="data-title">Har du använt föregående månads utbetalning till köp av personlig assistans?</span>
-							<span class="check w-15">Ja</span>
-							<span class="uncheck">Nej, det finns________kronor kvar.</span>
-						 </td>
-					</tr>				
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>7. Underskrift</caption>
-				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr>
-						<td colspan="12">
-							<span class="data-title">Jag försäkrar på heder och samvete att uppgifterna i blanketten är riktiga och fullständiga. </span>
-							<span class="data-title">När uppgifterna förändras måste jag meddela Försäkringskassan. Jag vet att det är straffbart att lämna felaktiga uppgifter,  att utelämna något eller att inte meddela Försäkringskassan när uppgifterna jag lämnat förändras.</span>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="3">
-							<span class="data-title">Datum (år, månad, dag)</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="6">
-							<span class="data-title">Namnteckning </span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-title">Telefon, även riktnummer</span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>8. Fyll i här om du som skrivit under är ställföreträdare</caption>
-				<tbody>
-					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
-					<tr>
-						<td colspan="12">
-							<span class="w-15 left">Jag är </span>
-							<span class="uncheck w-25">vårdnadshavare</span>
-							<span class="uncheck w-25">god man</span>
-							<span class="uncheck">förvaltare </span>
-						</td>
-					</tr>
-					<tr>
-						<td colspan="9">
-							<span class="data-title">Namnförtydligande</span>
-							<span class="data-value"></span>
-						 </td>
-						 <td colspan="3">
-							<span class="data-title">Personnummer (12 siffror </span>
-							<span class="data-value"></span>
-						 </td>
-					</tr>
-					
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<h3 class="table-title">Redovisning av kostnader</h3>
-		<div class="grey-box">
-			<p>Du ska redovisa dina kostnader i följande situationer: </p>
-			<p>Om du själv har anställt dina assistenter ska du alltid redovisa dina kostnader för sådana assistenter.  Detsamma gäller om du har beviljats assistansersättning med ett högre timbelopp eller har ansökt om högre timbelopp för tid före beslut och beslut ännu inte har fattats. Du ska även redovisa dina kostnader om du har  eller kan ha rätt till utbetalning med ett skäligt belopp för assistans anlitad utanför EES. </p>
-			<p>Om du får ersättningen i förskott ska du redovisa i slutet av perioden. Om du får ersättningen i efterskott ska  du redovisa varje månad.  </p>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>9. Redovisa dina kostnader</caption>
+				<caption>2. Du som är assistent</caption>
 				<tbody>
 					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+					
 					<tr>
-						<td colspan="4">
-							<b>Typ av kostnad</b>
-						 </td>
-						 <td colspan="3">
-							<b>Kostnad per timme</b>
-						 </td>
-						 <td colspan="3">
-							<b>Kostnad för perioden</b>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Lön (utom OB-tillägg) och lönebikostnader </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Lön i form av OB-tillägg </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Assistansomkostnader </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Utbildningskostnader </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Arbetsmiljöinsatser och personalomkostnader </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title">Administrationskostnader </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value">kronor</span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title"><b>Summa kostnad för assistansen:</b> </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value"><b>kronor</b></span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value"><b>kronor</b></span>
-						 </td>
-					</tr>
-					<tr>
-						<td colspan="4" class="bottom-left">
-							<span class="data-title"><b>Antal utförda timmar under perioden som kostnaden är beräknad på:</b> </span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							<span class="data-value"><b>kronor</b></span>
-						 </td>
-						 <td colspan="3" class="bottom-right">
-							
+						<td colspan="7">
+							<span class="data-title">Förnamn och efternamn</span>
+							<span class="data-value"></span>
+						</td>
+						<td colspan="3">
+							<span class="data-title">Personnummer (12 siffror)</span>
+							<span class="data-value"></span>
 						 </td>
 					</tr>
 					
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-
-	<h3 class="table-title pb-15">10. Fyll i här om du får ersättning i förskott</h3>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption><small>10.a Uppgift om perioden</small></caption>
-				<tbody>
 					<tr>
-						<td width="70%">
-							<span class="data-title">Från och med (månad)</span>
+						<td colspan="5">
+							<span class="data-title">Bostadsadress</span>
 							<span class="data-value"></span>
 						</td>
-						<td>
-							<span class="data-title">Till och med (månad)</span>
+						<td colspan="5">
+							<span class="data-title">Postnummer och ort</span>
 							<span class="data-value"></span>
 						 </td>
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+
+
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table  cellspacing="0" cellpadding="0" class="pdf-table">
+				<caption>3. Redovisning av utförd assistans</caption>
+				<tbody>
+					<tr class="for-grid"><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+										
+					<tr>
+						<td colspan="5" class="vtop">
+							<span class="data-title">Skriv den faktiska tiden i timmar och hundradelar. Tid för personalmöten, utbildning med mera ska inte redovisas  eftersom kostnaden för detta ingår i assistansersättningens timbelopp.</span>
+						</td>
+						<td colspan="5">
+							<span class="data-title"><b>Omvandling från minuter till hundradelar</b></span>
+							<span class="data-value">5 min = 0,08 &nbsp;&nbsp;&nbsp; 25 min = 0,42 &nbsp;&nbsp;&nbsp; 45 min = 0,75</span>
+							<span class="data-value">10 min = 0,17 &nbsp;&nbsp;&nbsp; 30 min = 0,5 &nbsp;&nbsp;&nbsp; 50 min = 0,83</span>
+							<span class="data-value">15 min = 0,25 &nbsp;&nbsp;&nbsp; 35 min = 0,58 &nbsp;&nbsp;&nbsp; 55 min = 0,92</span>
+							<span class="data-value">20 min = 0,33 &nbsp;&nbsp;&nbsp; 40 min = 0,67  </span>
+						 </td>
+					</tr>					
+				</tbody>
+			</table>
+		</div>
+	</section>
+
+
+
+
+
+
+
+	<section>
+		<div class="pdf-container clearfix">
+			<table cellspacing="0" cellpadding="0" class="pdf-table time-table">
+				<caption>3. Redovisning av utförd assistans</caption>
+				<tbody>
+					<tr>
+						<th>Dag</th>
+						<th>Fran</th>
+						<th>Till</th>
+						<th>Timmar</th>
+						<th>Vardag Kvall</th>
+						<th>Vardag natt</th>
+						<th>Veckoslut</th>
+						<th>Storhelg</th>
+						<th>Jour vardag</th>
+						<th>jour helg</th>
+						<th>Typ</th>
 					</tr>
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>10.b Finns det pengar kvar som du inte har använt för att köpa personlig assistans?</caption>
-				<tbody>
 					<tr>
-						<td>
-							<span class="check w-15">Ja</span>
-							<span class="uncheck">Nej, det finns________kronor kvar.</span>
-						 </td>
-					</tr>				
-				</tbody>
-			</table>
-		</div>
-	</section>
-
-	<section>
-		<div class="grey-box">
-			<p>När vi har fått din redovisning kommer vi att göra en slutavräkning. Det innebär att vi jämför den ersättning du har fått med den som du har redovisat. Om du inte har använt all ersättning till din personliga assistans under perioden så ska du betala tillbaka överskottet. Vi behöver veta hur du i så fall vill att det ska gå till. </p>
-		</div>
-	</section>
-
-	<section>
-		<div class="pdf-container clearfix">
-			<table  cellspacing="0" cellpadding="0" class="pdf-table">
-				<caption>10.c Hur vill du betala tillbaka eventuellt för mycket utbetald ersättning?</caption>
-				<tbody>
+						<td>1</td>
+						<td>11:00</td>
+						<td>20:00</td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
 					<tr>
-						<td>
-							<div class="check pb-10">Jag vill att Försäkringskassan drar av eventuellt för mycket utbetald ersättning för den här perioden på kommande utbetalningar.</div>
-							<div class="uncheck pb-10">Jag vill att Försäkringskassan prövar om jag är återbetalningsskyldig om det har utbetalats för mycket ersättning för den här perioden. </div>
-						 </td>
-					</tr>				
+						<td>1</td>
+						<td>11:00</td>
+						<td>20:00</td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+						<tr>
+						<td>1</td>
+						<td>11:00</td>
+						<td>20:00</td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td>9:00</td>
+						<td></td>
+						<td></td>
+						<td></td>
+						<td></td>
+					</tr>
+	
 				</tbody>
 			</table>
 		</div>
 	</section>
+
+
+
+
+
+
 
 
 </body>
