@@ -2,16 +2,16 @@
 // --------------------------------------------------
 
 .pdf-wrapper {
-    padding: 15px;
-	color: #495b73;
-    overflow: auto;
-    max-width: 100%;
+    padding         : 30px 40px;
+    color           : #495b73;
+    overflow        : auto;
+    max-width       : 100%;
     background-color: #fff;
-    display: block !important;
+    display         : block !important;
 
 
     table {
-        border-spacing: 0;
+        border-spacing : 0;
         border-collapse: inherit;
     }
 
@@ -99,16 +99,18 @@
         margin-bottom: 5px;
     }
 
-    caption,.table-title {
+    caption,
+    .table-title {
         font-size     : 20px;
         padding-bottom: 5px;
         font-weight   : bold;
         text-align    : left;
-        padding-top: 0;
+        padding-top   : 0;
         padding-bottom: 0;
-        color: #000;
-        caption-side: initial;
+        color         : #000;
+        caption-side  : initial;
     }
+
     caption small {
         font-size: 18px;
     }
@@ -124,7 +126,8 @@
         line-height     : 26px;
         background-color: #f3f3f3;
     }
-    .table-title + .grey-box {
+
+    .table-title+.grey-box {
         margin-top: 0;
     }
 
@@ -175,8 +178,8 @@
     .data-title {
         display       : block;
         padding-bottom: 5px;
-        color: #000;
-        font-size: inherit;
+        color         : #000;
+        font-size     : inherit;
     }
 
     .data-value {
@@ -184,26 +187,26 @@
         min-height: 16px;
     }
 
-   		section .pdf-table tr td,
-		section .pdf-table tr th {
-		    border-bottom: 1px solid #ccc;
-		}
+    section .pdf-table tr td,
+    section .pdf-table tr th {
+        border-bottom: 1px solid #ccc;
+    }
 
-		section .pdf-table tr:last-child td,
-		section .pdf-table tr:last-child th {
-		    border-bottom: 0;
-		}
+    section .pdf-table tr:last-child td,
+    section .pdf-table tr:last-child th {
+        border-bottom: 0;
+    }
 
-		section .pdf-table tr td ,
-		section .pdf-table tr th {
-		    padding     : 10px;
-		    border-right: 1px solid #ccc;
-		}
+    section .pdf-table tr td,
+    section .pdf-table tr th {
+        padding     : 10px;
+        border-right: 1px solid #ccc;
+    }
 
-		section .pdf-table tr td:last-child,
-		section .pdf-table tr th:last-child  {
-		    border-right: 0;
-		}
+    section .pdf-table tr td:last-child,
+    section .pdf-table tr th:last-child {
+        border-right: 0;
+    }
 
     section .pdf-table .for-grid {
         visibility: hidden;
@@ -221,72 +224,140 @@
     }
 
     /* --- date table --- */
-		.date-table {
-			width: 180px;
-			margin-top:15px;
-			border: 1px solid #cccccc;
-		}
-		.date-table	td{
-			padding: 3px;
-			min-width: 16px;
-			height: 40px;
-			text-align: center;
-			border-right: 1px solid #cccccc;
-		}
-		.date-table	td:last-child{
-			border-right: 0;
-		}
-		.date-data {
-			padding-left: 15px;
-			padding-top: 20px;
-		}
-		.date-section h4 {
-			margin-bottom: 10px;
-		}
-		.bottom-right {
-			vertical-align: bottom;
-			text-align:right;
-		}
-		.bottom-left {
-			vertical-align: bottom;
-			text-align:left;
-		}
-		.bottom-left .data-title {
-			padding-bottom: 0;
-			padding-top: 5px;
-		}
-		.pb-15 {
-			padding-bottom : 15px !important;
-		}
-        .pb-10 {
-			padding-bottom : 10px !important;
-		}
-        /*--------- time-table -------------- */
-		section .time-table {
-			border-color: transparent !important;
-		}
-		section .time-table tr:nth-child(odd) {
-			background-color: #f2f6ff;
-		}
+    .date-table {
+        width     : 180px;
+        margin-top: 15px;
+        border    : 1px solid #cccccc;
+    }
 
-		section .time-table tr td ,
-		section .time-table tr th {
-			text-align: center;
-			border-color: #dfe9ff;
-			padding-top: 13px;
-			padding-bottom: 13px;
-		}
+    .date-table td {
+        padding     : 3px;
+        min-width   : 16px;
+        height      : 40px;
+        text-align  : center;
+        border-right: 1px solid #cccccc;
+    }
+
+    .date-table td:last-child {
+        border-right: 0;
+    }
+
+    .date-data {
+        padding-left: 15px;
+        padding-top : 20px;
+    }
+
+    .date-section h4 {
+        margin-bottom: 10px;
+    }
+
+    .bottom-right {
+        vertical-align: bottom;
+        text-align    : right;
+    }
+
+    .bottom-left {
+        vertical-align: bottom;
+        text-align    : left;
+    }
+
+    .bottom-left .data-title {
+        padding-bottom: 0;
+        padding-top   : 5px;
+    }
+
+    .pb-15 {
+        padding-bottom: 15px !important;
+    }
+
+    .pb-10 {
+        padding-bottom: 10px !important;
+    }
+
+    /*--------- time-table -------------- */
+    section .time-table {
+        border-color: transparent !important;
+    }
+
+    section .time-table tr:nth-child(odd) {
+        background-color: #f2f6ff;
+    }
+
+    section .time-table tr td,
+    section .time-table tr th {
+        text-align    : center;
+        border-color  : #dfe9ff;
+        padding-top   : 13px;
+        padding-bottom: 13px;
+    }
 }
 
-    .pdf_title  {
-        float: right;
-        display: flex;
-        justify-content: space-between;
-        .user-select {
-            height          : 45px;
-            border-radius   : 6px;
-            width: 220px;
-            margin-right: 15px;
+.pdf_title {
+    float          : right;
+    display        : flex;
+    justify-content: space-between;
 
+    .user-select {
+        height       : 45px;
+        border-radius: 6px;
+        width        : 220px;
+        margin-right : 15px;
+
+    }
+}
+//--------- pdf-header ------------
+
+.pdf-header {
+    display: flex;
+    padding-bottom: 30px;
+    align-items: center;
+    justify-content: space-between;
+
+    .custom-select {
+        max-width: 252px;
+        height: 50px;
+        border-color: #e0eaff;
+    }
+    .btn {
+        height: 50px;
+        font-size: 14px;
+        font-weight: 600;
+        color: #ffffff;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+    }
+    .btn-green {
+        background-color: #6bc259;
+        &:hover {
+            background-color: #4dca33;
         }
     }
+    .btn-orange {
+        background-color: #f89619;
+        &:hover {
+            background-color: #fb8f05;
+        }
+    }
+    .btn-grey {
+        background-color: #808080;
+        &:hover {
+            background-color: #605e5e;
+        }
+    }
+}
+//----------- pdf-footer ---------
+.pdf-footer {
+    display: flex;
+    align-items: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    .btn {
+        min-width: 40%;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

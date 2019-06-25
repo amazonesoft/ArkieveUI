@@ -134,21 +134,26 @@
                 <main role="main" class="content">
                     <div class="page_title">
                         <a href="#" class="page_title__back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg></a>
-                        Back
-
-                        <div class="pdf_title">
-                            <select class="custom-select user-select">
-                                <option selected="">Select user</option>
-                                <option value="1">a</option>
-                                <option value="2">b</option>
-                            </select>
-                            <a href="#" class="btn download">Download</a>
-                        </div>
+                        Worker Time Bank
                     </div>
 
 
                     <div class="card pdf-wrapper">
 
+                        <div class="pdf-header">
+                            <select class="custom-select">
+                                <option selected="">Select user</option>
+                                <option value="1">a</option>
+                                <option value="2">b</option>
+                            </select>
+
+                            <div class="pdf-grp">
+                                <a href="#" class="btn btn-green">Customer Approved</a>
+                                <a href="#" class="btn btn-orange">Worker Sign</a>
+                                <a href="#" class="btn btn-grey">Admin Sign</a>
+                            </div>
+                            
+                        </div>
 
                         <header>
                             <div class="pdf-container clearfix">
@@ -632,6 +637,11 @@
                             </div>
                         </section>
 
+                        <footer class="pdf-footer">
+                            <a href="#" class="btn download">
+                                <span>Download</span>
+                            </a>
+                        </footer>
 
                     </div>
 
