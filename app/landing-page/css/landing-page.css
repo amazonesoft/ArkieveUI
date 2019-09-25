@@ -9,7 +9,7 @@
     .bg-circle {
         width             : 100%;
         /* min-height     : 1062px; */
-        background        : url('../images/landing-page/bg-circle.png') no-repeat;
+        background        : url('../images/landing-page/bg-functionality.png') no-repeat;
         background-size   : cover;
     }
 }
@@ -139,6 +139,8 @@
     width                    : 270px;
     height                   : 447px;
     padding                  : 40px;
+    min-width                : 270px;
+    max-width: 270px;
     display                  : inline-block;
     box-shadow               : 0px 10px 60px 0 rgba(46, 61, 98, 0.1);
     background-color         : #ffffff;
@@ -146,11 +148,13 @@
     border-bottom-left-radius: 30px;
     overflow                 : hidden;
     border                   : 0;
+    cursor                   : pointer;
+    margin-top               : 10px;
+    margin-bottom            : 10px;
+}
 
-    max-width    : 100%;
-    margin-top   : 10px;
-    margin-bottom: 10px;
-
+.functionalities .card:hover {
+    background: url(../images/landing-page/bg-card-hover.png) no-repeat;
 }
 
 .functionalities .service-icon {
@@ -160,11 +164,19 @@
     background: url(../images/landing-page/icons/service-blue.png) no-repeat;
 }
 
+.functionalities .card:hover .service-icon {
+    background: url(../images/landing-page/icons/service-white.png) no-repeat;
+}
+
 .functionalities .schedule-icon {
     width     : 63px;
     height    : 63px;
     display   : inline-block;
     background: url(../images/landing-page/icons/schedule-blue.png) no-repeat;
+}
+
+.functionalities .card:hover .schedule-icon {
+    background: url(../images/landing-page/icons/schedule-white.png) no-repeat;
 }
 
 .functionalities .user-icon {
@@ -174,11 +186,19 @@
     background: url(../images/landing-page/icons/user-blue.png) no-repeat;
 }
 
+.functionalities .card:hover .user-icon {
+    background: url(../images/landing-page/icons/user-white.png) no-repeat;
+}
+
 .functionalities .social-icon {
     width     : 63px;
     height    : 63px;
     display   : inline-block;
     background: url(../images/landing-page/icons/social-blue.png) no-repeat;
+}
+
+.functionalities .card:hover .social-icon {
+    background: url(../images/landing-page/icons/social-white.png) no-repeat;
 }
 
 .functionalities .card-body {
@@ -192,6 +212,11 @@
     font-size  : 16px;
     line-height: 2;
     color      : #666e82;
+}
+
+.functionalities .card:hover p,
+.functionalities .card:hover h4 {
+    color: #fff;
 }
 
 .functionalities .card h4 {
@@ -209,6 +234,10 @@
     margin-top: 10px;
     display   : inline-block;
     background: url(../images/landing-page/icons/right-arrow.png) no-repeat;
+}
+
+.functionalities .card:hover .right-arrow {
+    background: url(../images/landing-page/icons/right-arrow-white.png) no-repeat;
 }
 
 /* ----------- works-mobile ---------------- */
@@ -235,14 +264,17 @@
 }
 
 .works-mobile ul {
-    padding: 50px 0
+    padding   : 50px 0;
+    list-style: none;
 }
 
 .works-mobile ul li {
-    font-family: Poppins;
-    font-size  : 18px;
-    line-height: 2.22;
-    color      : #666e82;
+    font-family : Poppins;
+    font-size   : 18px;
+    line-height : 2.22;
+    color       : #666e82;
+    padding-left: 30px;
+    background  : url(../images/landing-page/icons/bulet.png) no-repeat left center;
 }
 
 .works-mobile .btn-primary {
@@ -269,6 +301,7 @@
     width                    : 370px;
     height                   : 735px;
     padding                  : 40px;
+    min-width: 270px;
     display                  : inline-block;
     box-shadow               : 0px 10px 60px 0 rgba(46, 61, 98, 0.1);
     background-color         : #ffffff;
