@@ -139,7 +139,6 @@
     width                    : 270px;
     height                   : 447px;
     padding                  : 40px;
-    min-width                : 270px;
     max-width                : 270px;
     display                  : inline-block;
     box-shadow               : 0px 10px 60px 0 rgba(46, 61, 98, 0.1);
@@ -153,8 +152,19 @@
     margin-bottom            : 10px;
 }
 
-.functionalities .card:hover {
-    background: url(../images/landing-page/bg-card-hover.png) no-repeat;
+@media (max-width: 575.98px) {
+    .functionalities .card {
+        text-align  : center;
+        margin-left : auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 1200px) and (max-width: 1400px) {
+    .functionalities .card {
+        margin-left : 5px;
+        margin-right: 5px;
+    }
 }
 
 .functionalities .service-icon {
@@ -164,19 +174,13 @@
     background: url(../images/landing-page/icons/service-blue.png) no-repeat;
 }
 
-.functionalities .card:hover .service-icon {
-    background: url(../images/landing-page/icons/service-white.png) no-repeat;
-}
+
 
 .functionalities .schedule-icon {
     width     : 63px;
     height    : 63px;
     display   : inline-block;
     background: url(../images/landing-page/icons/schedule-blue.png) no-repeat;
-}
-
-.functionalities .card:hover .schedule-icon {
-    background: url(../images/landing-page/icons/schedule-white.png) no-repeat;
 }
 
 .functionalities .user-icon {
@@ -186,9 +190,7 @@
     background: url(../images/landing-page/icons/user-blue.png) no-repeat;
 }
 
-.functionalities .card:hover .user-icon {
-    background: url(../images/landing-page/icons/user-white.png) no-repeat;
-}
+
 
 .functionalities .social-icon {
     width     : 63px;
@@ -197,8 +199,35 @@
     background: url(../images/landing-page/icons/social-blue.png) no-repeat;
 }
 
-.functionalities .card:hover .social-icon {
-    background: url(../images/landing-page/icons/social-white.png) no-repeat;
+@media (min-width: 1200px) {
+    .functionalities .card:hover {
+        background: url(../images/landing-page/bg-card-hover.png) no-repeat;
+    }
+
+    .functionalities .card:hover .service-icon {
+        background: url(../images/landing-page/icons/service-white.png) no-repeat;
+    }
+
+    .functionalities .card:hover .schedule-icon {
+        background: url(../images/landing-page/icons/schedule-white.png) no-repeat;
+    }
+
+    .functionalities .card:hover .user-icon {
+        background: url(../images/landing-page/icons/user-white.png) no-repeat;
+    }
+
+    .functionalities .card:hover .social-icon {
+        background: url(../images/landing-page/icons/social-white.png) no-repeat;
+    }
+
+    .functionalities .card:hover p,
+    .functionalities .card:hover h4 {
+        color: #fff;
+    }
+
+    .functionalities .card:hover .right-arrow {
+        background: url(../images/landing-page/icons/right-arrow-white.png) no-repeat;
+    }
 }
 
 .functionalities .card-body {
@@ -214,10 +243,7 @@
     color      : #666e82;
 }
 
-.functionalities .card:hover p,
-.functionalities .card:hover h4 {
-    color: #fff;
-}
+
 
 .functionalities .card h4 {
     font-family: Poppins;
@@ -236,15 +262,25 @@
     background: url(../images/landing-page/icons/right-arrow.png) no-repeat;
 }
 
-.functionalities .card:hover .right-arrow {
-    background: url(../images/landing-page/icons/right-arrow-white.png) no-repeat;
-}
+
 
 /* ----------- works-mobile ---------------- */
 
 .works-mobile {
     padding-top   : 100px;
     padding-bottom: 100px;
+}
+
+@media (max-width: 575.98px) {
+
+    .works-mobile,
+    .works-mobile h3 {
+        text-align: center !important;
+    }
+
+    .works-mobile ul {
+        text-align: left;
+    }
 }
 
 .works-mobile h3 {
