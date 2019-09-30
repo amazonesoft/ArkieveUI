@@ -1,8 +1,13 @@
 .top-bg {
     width          : 100%;
-    min-height     : 890px;
     background     : url('../images/landing-page/bg-top.png') no-repeat;
     background-size: cover;
+}
+
+@media (min-width:992px) {
+    .top-bg {
+        min-height: 890px;
+    }
 }
 
 @media (min-width:992px) {
@@ -21,14 +26,16 @@
 }
 
 .header .btn-login {
-    font-family: Poppins;
-    font-size  : 16px;
-    font-weight: 600;
-    color      : #ffffff;
-    min-width  : 166px;
-    line-height: 42px;
-    border     : solid 3px #ffffff;
-    box-shadow : 0px 10px 30px 0 rgba(255, 130, 87, 0.3);
+    font-family  : Poppins;
+    font-size    : 16px;
+    font-weight  : 600;
+    color        : #ffffff;
+    min-width    : 166px;
+    line-height  : 42px;
+    border-radius: 30px;
+    border       : solid 3px #ffffff;
+    box-shadow   : 0px 10px 30px 0 rgba(255, 130, 87, 0.3);
+    margin-left  : 10px;
 }
 
 .header .btn-login:hover {
@@ -41,15 +48,6 @@
     justify-content: space-between;
     align-items    : center;
 }
-
-@media (max-width:991.98px) {
-    .header__inner {
-        flex-direction : column;
-        justify-content: center;
-
-    }
-}
-
 
 /* --- main-nav --- */
 .main-nav a {
@@ -95,7 +93,7 @@
 
 @media (max-width:991.98px) {
     .banner__article h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 }
 
@@ -130,6 +128,12 @@
     color      : #2e3d62;
 }
 
+@media (max-width:991.98px) {
+    .section__title {
+        font-size: 36px;
+    }
+}
+
 .functionalities .section__title {
     padding-top   : 100px;
     padding-bottom: 100px;
@@ -140,6 +144,7 @@
     height                   : 447px;
     padding                  : 40px;
     max-width                : 270px;
+    min-width                : 212px;
     display                  : inline-block;
     box-shadow               : 0px 10px 60px 0 rgba(46, 61, 98, 0.1);
     background-color         : #ffffff;
@@ -292,6 +297,12 @@
     padding-bottom: 30px;
 }
 
+@media (max-width:991.98px) {
+    .works-mobile h3 {
+        font-size: 36px;
+    }
+}
+
 .works-mobile h4 {
     font-family: Poppins;
     font-size  : 24px;
@@ -362,8 +373,8 @@
 
 .package .card-header h4 {
     font-family   : Poppins;
-    font-size     : 60px;
-    font-weight   : bold;
+    font-size     : 48px;
+    font-weight   : normal;
     letter-spacing: 2.8px;
     color         : #2e3d62;
 }
@@ -487,6 +498,7 @@
 
 /* ------- footer ------- */
 .footer {
+    color         : #666e82;
     padding-top   : 30px;
     padding-bottom: 30px;
 }
