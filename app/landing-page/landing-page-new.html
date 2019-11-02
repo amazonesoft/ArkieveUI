@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,7 +16,60 @@
 </head>
 
 <body>
+
+
+
+
+    <!-- Strat mobile menu -->
+    <div class="outer-menu d-lg-none">
+        <input class="checkbox-toggle" type="checkbox" />
+        <div class="hamburger">
+            <div></div>
+        </div>
+        <div class="menu">
+            <div>
+                <div>
+                    <ul>
+                        <li><a href="#Funktionalitet">Funktionalitet</a></li>
+                        <li><a href="#Priser">Priser</a></li>
+                        <li><a href="#" data-toggle="modal" data-target="#exampleModalCenter">Kontaka Oss</a></li>
+                        <li><a href="/Account/Login">Logga in</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End mboile menu -->
+
+
+
+
+
     <div class="top-bg">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -26,12 +77,12 @@
             <div class="row">
                 <div class="col header__inner">
                     <a href="#" class="logo"><img src="images/landing-page/logo.png" alt="arkieve logo"> </a>
-                    <nav class="main-nav">
+                    <nav class="main-nav d-none d-lg-block">
                         <a href="#Funktionalitet">Funktionalitet</a>
                         <a href="#Priser">Priser</a>
                         <a href="#" data-toggle="modal" data-target="#exampleModalCenter">Kontaka Oss</a>
                     </nav>
-                    <a class="btn btn-login" href="/Account/Login">Logga in</a>
+                    <a class="btn btn-login d-none d-lg-block" href="/Account/Login">Logga in</a>
                 </div>
             </div>
 
@@ -46,8 +97,10 @@
                         <div class="col-lg-5  my-5">
                             <article class="banner__article">
                                 <h1>Heltäckande Schemaläggning För Personliga Assistenter</h1>
-                                <p>Arkhive är integrerat med Försäkringskassan och låter er rapportera era schemalagda timmar digitalt</p>
-                                <a class="btn btn-banner" href="#" data-toggle="modal" data-target="#exampleModalCenter">Blir kund</a>
+                                <p>Arkhive är integrerat med Försäkringskassan och låter er rapportera era schemalagda
+                                    timmar digitalt</p>
+                                <a class="btn btn-banner" href="#" data-toggle="modal"
+                                    data-target="#exampleModalCenter">Blir kund</a>
                             </article>
                         </div>
                     </div>
@@ -74,7 +127,8 @@
                         <span class="service-icon"></span>
                         <h4>Schemaläggning och digital tidrapportering</h4>
                         <div class="card-body">
-                            <p>Arkhive är integrerat med Försäkringskassan och låter er rapportera era schemalagda timmar digitalt.</p>
+                            <p>Arkhive är integrerat med Försäkringskassan och låter er rapportera era schemalagda
+                                timmar digitalt.</p>
                         </div>
                     </div>
                     <div class="card">
@@ -89,7 +143,8 @@
                         <span class="user-icon"></span>
                         <h4>Systematiskt arbetsmiljöarbete</h4>
                         <div class="card-body">
-                            <p>Arkhive innehåller en modul för systematiskt arbetsmiljöarbete. Dessutom påmminns ni så att detta görs varje år.</p>
+                            <p>Arkhive innehåller en modul för systematiskt arbetsmiljöarbete. Dessutom påmminns ni så
+                                att detta görs varje år.</p>
                         </div>
                     </div>
 
@@ -98,7 +153,8 @@
                         <h4>Social dokumentation</h4>
                         <div class="card-body">
                             <p>
-                                Det ingår ett användarvänligt system för social dokumentation i Arkive. Dokumentationen kan ske direkt, vilket minskar risken att man glömmer.
+                                Det ingår ett användarvänligt system för social dokumentation i Arkive. Dokumentationen
+                                kan ske direkt, vilket minskar risken att man glömmer.
                             </p>
                         </div>
                     </div>
@@ -119,7 +175,8 @@
                                 <li>I telefonen</li>
                                 <li>I Ipad</li>
                             </ul>
-                            <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">Blir Kund</a>
+                            <a href="#" class="btn btn-primary" data-toggle="modal"
+                                data-target="#exampleModalCenter">Blir Kund</a>
                         </div>
 
                     </div>
@@ -289,8 +346,10 @@
         </div>
     </footer>
 
-    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="needs-validation modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" novalidate>
+    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+        aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="needs-validation modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document"
+            novalidate>
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalCenterTitle">Kontakta Oss</h5>
@@ -302,19 +361,20 @@
                     <div class="form-group">
                         <label for="name">Förnamn och efternamn</label>
                         <input type="text" class="form-control" id="customer_name" placeholder="Förnamn och efternamn"
-                               required>
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">E-post</label>
                         <input type="email" class="form-control" id="customer_email" aria-describedby="emailHelp"
-                               placeholder="Skriv din e-post" required>
+                            placeholder="Skriv din e-post" required>
                         <small id="emailHelp" class="form-text text-muted">
                             Ingen annan får ta del er e-post adress.
                         </small>
                     </div>
                     <div class="form-group">
                         <label for="city">Telefonnummer</label>
-                        <input type="text" class="form-control" id="customer_phone" placeholder="Telefonnummer" required>
+                        <input type="text" class="form-control" id="customer_phone" placeholder="Telefonnummer"
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="message">Meddelande</label>
@@ -334,8 +394,10 @@
         </div>
     </div>
 
-    <div class="modal fade" id="buyPackageModal" tabindex="-1" role="dialog" aria-labelledby="buyPackageModalTitle" aria-hidden="true">
-        <div class="needs-validation modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document" novalidate>
+    <div class="modal fade" id="buyPackageModal" tabindex="-1" role="dialog" aria-labelledby="buyPackageModalTitle"
+        aria-hidden="true">
+        <div class="needs-validation modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document"
+            novalidate>
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title" id="buyPackageModalTitle">
@@ -349,12 +411,12 @@
                     <div class="form-group">
                         <label for="name">Förnamn och efternamn</label>
                         <input type="text" class="form-control" id="buyer_name" placeholder="Förnamn och efternamn"
-                               required>
+                            required>
                     </div>
                     <div class="form-group">
                         <label for="exampleInputEmail1">E-post</label>
                         <input type="email" class="form-control" id="buyer_email" aria-describedby="emailHelp"
-                               placeholder="Skriv din e-post" required>
+                            placeholder="Skriv din e-post" required>
                         <small id="emailHelp" class="form-text text-muted">
                             Ingen annan får ta del er e-post adress.
                         </small>
@@ -374,7 +436,8 @@
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="reset" class="btn btn-secondary" id="reset-buyer-input" data-dismiss="modal" aria-label="Close">Avbryt</button>
+                    <button type="reset" class="btn btn-secondary" id="reset-buyer-input" data-dismiss="modal"
+                        aria-label="Close">Avbryt</button>
                     <button type="submit" class="btn btn-primary" id="buyer-btn">Skicka</button>
                 </div>
             </div>
@@ -394,6 +457,16 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
+    <!-- for mobile menu -->
+    <script>
+        jQuery(document).ready(function () {
+            $('.menu li a').on('click', function () {
+                $('.checkbox-toggle').prop('checked', false);
+            });
+        });   
+    </script>
+
 
 </body>
+
 </html>
