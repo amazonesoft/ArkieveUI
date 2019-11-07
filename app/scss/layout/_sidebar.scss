@@ -54,21 +54,23 @@
             background-color: #ecf2fd;
         }
 
-        &.active {
+        &.active,
+        &:hover {
             color: $cerulean-blue;
         }
 
         &.home {
             background: {
                 repeat  : no-repeat;
-                position: left 32px top 18px;
+                position: left 32px top 16px;
             }
 
             &:not(.active) {
                 background-image: url('../images/icons/home.png');
             }
 
-            &.active {
+            &.active,
+            &:hover {
                 background-image: url('../images/icons/home-blue.png');
             }
         }
@@ -76,14 +78,15 @@
         &.availability {
             background: {
                 repeat  : no-repeat;
-                position: left 32px top 18px;
+                position: left 32px top 16px;
             }
 
             &:not(.active) {
                 background-image: url('../images/icons/availability.png');
             }
 
-            &.active {
+            &.active,
+            &:hover {
                 background-image: url('../images/icons/availability-blue.png');
             }
         }
@@ -91,30 +94,114 @@
         &.schedule {
             background: {
                 repeat  : no-repeat;
-                position: left 32px top 18px;
+                position: left 32px top 16px;
             }
 
             &:not(.active) {
                 background-image: url('../images/icons/schedule.png');
             }
 
-            &.active {
+            &.active,
+            &:hover {
                 background-image: url('../images/icons/schedule-blue.png');
             }
         }
 
-        &.user-management {
+        &.user {
             background: {
                 repeat  : no-repeat;
-                position: left 32px top 18px;
+                position: left 32px top 16px;
             }
 
             &:not(.active) {
-                background-image: url('../images/icons/user-management.png');
+                background-image: url('../images/icons/user.png');
             }
 
-            &.active {
-                background-image: url('../images/icons/user-management-blue.png');
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/user-blue.png');
+            }
+        }
+
+
+
+        &.absence {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/absence.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/absence-blue.png');
+            }
+        }
+
+        &.documentation {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/documentation.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/documentation-blue.png');
+            }
+        }
+
+        &.work {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/work.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/work-blue.png');
+            }
+        }
+
+        &.notes {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/notes.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/notes-blue.png');
+            }
+        }
+
+        &.message {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/message.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/message-blue.png');
             }
         }
 
@@ -151,15 +238,48 @@
         &.reports {
             background: {
                 repeat  : no-repeat;
-                position: left 32px top 18px;
+                position: left 32px top 16px;
             }
 
             &:not(.active) {
                 background-image: url('../images/icons/reports.png');
             }
 
-            &.active {
+            &.active,
+            &:hover {
                 background-image: url('../images/icons/reports-blue.png');
+            }
+        }
+
+        &.time-report {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/time-report.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/time-report-blue.png');
+            }
+        }
+
+        &.journals {
+            background: {
+                repeat  : no-repeat;
+                position: left 32px top 16px;
+            }
+
+            &:not(.active) {
+                background-image: url('../images/icons/journals.png');
+            }
+
+            &.active,
+            &:hover {
+                background-image: url('../images/icons/journals-blue.png');
             }
         }
 
@@ -178,7 +298,7 @@
             }
         }
 
-         &.messaging {
+        &.messaging {
             background: {
                 repeat  : no-repeat;
                 position: left 32px top 19px;
